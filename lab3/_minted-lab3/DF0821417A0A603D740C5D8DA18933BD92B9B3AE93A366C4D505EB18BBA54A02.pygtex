@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }turtlebot3\PYGZus{}navigation\PYG{+w}{ }turtlebot3\PYGZus{}navigation.launch\PYG{+w}{ }map\PYGZus{}file
+\PYG{+w}{        }:\PYG{o}{=}\PYG{n+nv}{\PYGZdl{}HOME}/gix\PYGZus{}map.yaml
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }grep\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}cpp\PYGZsq{}}\PYG{+w}{ }CMakeLists.txt\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }wc\PYG{+w}{ }\PYGZhy{}l
+\end{Verbatim}

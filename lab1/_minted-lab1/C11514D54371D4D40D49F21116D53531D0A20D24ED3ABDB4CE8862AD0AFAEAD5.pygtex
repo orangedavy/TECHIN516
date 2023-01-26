@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }linear:
+\PYG{+w}{          }x:\PYG{+w}{ }\PYGZhy{}0.005202962551265955
+\PYG{+w}{          }y:\PYG{+w}{ }\PYG{l+m}{0}.0
+\PYG{+w}{          }z:\PYG{+w}{ }\PYG{l+m}{0}.0
+\PYG{+w}{        }angular:
+\PYG{+w}{          }x:\PYG{+w}{ }\PYG{l+m}{0}.0
+\PYG{+w}{          }y:\PYG{+w}{ }\PYG{l+m}{0}.0
+\PYG{+w}{          }z:\PYG{+w}{ }\PYG{l+m}{0}.0
+\end{Verbatim}

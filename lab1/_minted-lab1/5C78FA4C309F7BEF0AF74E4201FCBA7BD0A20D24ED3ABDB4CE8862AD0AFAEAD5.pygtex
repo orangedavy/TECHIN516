@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }rosbag\PYG{+w}{ }record\PYG{+w}{ }/odom\PYG{+w}{ }/cmd\PYGZus{}vel\PYG{+w}{ }/tf\PYG{+w}{ }/scan\PYG{+w}{ }\PYGZhy{}O\PYG{+w}{ }\PYGZlt{}your\PYGZus{}name\PYGZgt{}\PYGZus{}patrol.bag
+\end{Verbatim}

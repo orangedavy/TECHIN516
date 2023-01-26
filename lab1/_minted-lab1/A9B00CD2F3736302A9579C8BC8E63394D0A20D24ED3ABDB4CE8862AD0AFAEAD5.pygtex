@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }roscd\PYG{+w}{ }turtlebot3\PYGZus{}description/urdf/
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }rosrun\PYG{+w}{ }gazebo\PYGZus{}ros\PYG{+w}{ }spawn\PYGZus{}model\PYG{+w}{ }\PYGZhy{}urdf\PYG{+w}{ }\PYGZhy{}file\PYG{+w}{ }turtlebot3\PYGZus{}burger.urdf.xacro
+
+\PYG{+w}{   }\PYGZhy{}x\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYGZhy{}y\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYGZhy{}z\PYG{+w}{ }\PYG{l+m}{1}\PYG{+w}{ }\PYGZhy{}model\PYG{+w}{ }TURTLEBOT3\PYGZus{}MODEL
+\end{Verbatim}

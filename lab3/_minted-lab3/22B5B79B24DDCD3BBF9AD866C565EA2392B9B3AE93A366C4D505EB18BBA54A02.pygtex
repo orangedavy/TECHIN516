@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }turtlebot3\PYGZus{}gazebo\PYG{+w}{ }turtlebot3\PYGZus{}empty\PYGZus{}world.launch\PYG{+w}{ }x\PYGZus{}pos
+\PYG{+w}{        }:\PYG{o}{=}\PYGZhy{}19.0\PYG{+w}{ }y\PYGZus{}pos:\PYG{o}{=}\PYG{l+m}{0}.0
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }w:\PYG{+w}{ }linear\PYG{+w}{ }vel\PYG{+w}{ }+0.01,\PYG{+w}{ }angular\PYG{+w}{ }vel\PYG{+w}{ }\PYG{l+m}{0}.0
+\PYG{+w}{  }a:\PYG{+w}{ }linear\PYG{+w}{ }vel\PYG{+w}{ }\PYG{l+m}{0}.0,\PYG{+w}{ }angular\PYG{+w}{ }vel\PYG{+w}{ }+0.1
+\PYG{+w}{  }s:\PYG{+w}{ }linear\PYG{+w}{ }vel\PYG{+w}{ }\PYG{l+m}{0}.0,\PYG{+w}{ }angular\PYG{+w}{ }vel\PYG{+w}{ }\PYG{l+m}{0}.0,\PYG{+w}{ }reset
+\PYG{+w}{  }d:\PYG{+w}{ }linear\PYG{+w}{ }vel\PYG{+w}{ }\PYG{l+m}{0}.0,\PYG{+w}{ }angular\PYG{+w}{ }vel\PYG{+w}{ }\PYGZhy{}0.1
+\PYG{+w}{  }x:\PYG{+w}{ }linear\PYG{+w}{ }vel\PYG{+w}{ }\PYGZhy{}0.01,\PYG{+w}{ }angular\PYG{+w}{ }vel\PYG{+w}{ }\PYG{l+m}{0}.0
+\end{Verbatim}

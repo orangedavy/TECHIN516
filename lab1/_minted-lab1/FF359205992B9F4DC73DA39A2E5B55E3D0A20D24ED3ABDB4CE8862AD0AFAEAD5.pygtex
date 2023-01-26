@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }\PYG{n+nb}{export}\PYG{+w}{ }\PYG{n+nv}{TURTLEBOT3\PYGZus{}MODEL}\PYG{o}{=}burger
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }turtlebot3\PYGZus{}gazebo\PYG{+w}{ }turtlebot3\PYGZus{}stage\PYGZus{}1.launch
+\end{Verbatim}

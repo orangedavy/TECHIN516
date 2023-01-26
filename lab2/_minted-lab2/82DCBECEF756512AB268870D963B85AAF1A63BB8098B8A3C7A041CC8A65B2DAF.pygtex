@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZdl{}\PYG{+w}{ }sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}dynamixel\PYGZhy{}sdk
+\PYGZdl{}\PYG{+w}{ }sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}turtlebot3\PYGZhy{}msgs
+\PYGZdl{}\PYG{+w}{ }sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}turtlebot3
+\end{Verbatim}

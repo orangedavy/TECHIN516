@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }gazebo\PYGZus{}ros\PYG{+w}{ }empty\PYGZus{}world.launch\PYG{+w}{ }world\PYGZus{}name:\PYG{o}{=}worlds/cafe.world
+\end{Verbatim}

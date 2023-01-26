@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYGZdl{}\PYG{+w}{ }rostopic\PYG{+w}{ }pub\PYG{+w}{ }\PYGZhy{}1\PYG{+w}{ }/cmd\PYGZus{}vel\PYG{+w}{ }geometry\PYGZus{}msgs/
+\PYG{+w}{        }Twist\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZob{}linear:  \PYGZob{}x: \PYGZlt{}value\PYGZgt{}, y: 0.0, z: 0.0\PYGZcb{}, angular}
+\PYG{l+s+s1}{        : \PYGZob{}x: 0.0,y: 0.0,z: 0.0\PYGZcb{}\PYGZcb{}\PYGZsq{}}
+\end{Verbatim}

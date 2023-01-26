@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }turtlebot3\PYGZus{}example\PYG{+w}{ }interactive\PYGZus{}markers.launch
+
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }rosrun\PYG{+w}{ }rviz\PYG{+w}{ }rviz\PYG{+w}{ }\PYGZhy{}d\PYG{+w}{ }\PYG{l+s+sb}{`}rospack\PYG{+w}{ }find\PYG{+w}{ }turtlebot3\PYGZus{}example\PYG{l+s+sb}{`}/rviz
+\PYG{+w}{    }/turtlebot3\PYGZus{}interactive.rviz
+\end{Verbatim}

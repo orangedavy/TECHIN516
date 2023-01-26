@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }rostopic\PYG{+w}{ }pub\PYG{+w}{ }/move\PYGZus{}base\PYGZus{}simple/goal\PYG{+w}{ }geometry\PYGZus{}msgs/PoseStamped\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}}
+\PYG{l+s+s1}{    \PYGZob{}header: \PYGZob{}stamp: now, frame\PYGZus{}id: \PYGZdq{}map\PYGZdq{}\PYGZcb{}, pose}
+\PYG{l+s+s1}{    : \PYGZob{}position: \PYGZob{}x: \PYGZlt{}value\PYGZgt{}, y: \PYGZlt{}value\PYGZgt{}, z: \PYGZlt{}value\PYGZgt{}\PYGZcb{}, orientation: \PYGZob{}w: \PYGZlt{}value\PYGZgt{}\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZsq{}}
+\end{Verbatim}

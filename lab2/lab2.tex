@@ -318,6 +318,21 @@ The map that you created with gmapping is a static map. This means that the map 
           \centering\includegraphics[width=14cm]{images/navigation_rqt_graph.png}\vspace{-10pt}
           \caption{Resulting \mintinline{bash}{rqt_graph} when running the navigation feature.}\label{fig:navigation_graph}
           \end{figure}
+
+          \begin{table}[ht]
+            \centering
+            \begin{tabular}{|l|l|l|l|}
+            \hline
+            \textbf{Topic} & \textbf{Type}           & \textbf{Publisher} & \textbf{Subscriber} \\ \hline
+            /cmd\_vel      & geometry\_msgs/Twist    & /move\_base        & /gazebo             \\ \hline
+            /scan          & sensor\_msgs/LaserScan  & /move\_base        & /amcl               \\ \hline
+            /tf &
+              tf2\_msgs/TFMessage &
+              \begin{tabular}[c]{@{}l@{}}/move\_base\\ /move\_base\\ /amcl\end{tabular} &
+              \begin{tabular}[c]{@{}l@{}}/n\_\_rviz\\ /amcl\\ /move\_base\end{tabular} \\ \hline
+            /map           & nav\_msgs/OccupancyGrid & /map\_server       & /move\_base         \\ \hline
+            \end{tabular}
+            \end{table}
         
         \item Upload a video that shows the robot navigating to a new location using 2DNav Goal without the pillar.
         \item Upload a video that shows the robot navigating to a new location using 2DNav Goal that avoids the pillar that you inserted.

@@ -75,7 +75,7 @@ This method uses a small python script called spawn\_model to make a service cal
 \textbf{Note}: Normally, we can take advantage of the roslaunch command as we are loading the gazebo world, and add the robot spawning portion to the launch file. The resulting added code would look like the following lines:
 \begin{figure}[H]
   \vspace{-10pt}
-  \centering\includegraphics[width=14cm]{lab1figure/lab1gazebo.png}\vspace{-10pt}
+  \centering\includegraphics[width=14cm]{images/lab1gazebo.png}\vspace{-10pt}
   \caption{illustration of the launch file.}\label{fig:omni}
   \end{figure}
 
@@ -85,7 +85,7 @@ This method uses a small python script called spawn\_model to make a service cal
     
 \begin{figure}[H]
   \vspace{-10pt}
-  \centering\includegraphics[width=14cm]{lab1figure/lab1gazebodemo.png}\vspace{-10pt}
+  \centering\includegraphics[width=14cm]{images/lab1gazebodemo.png}\vspace{-10pt}
   \caption{An illustration of creating a model in gazebo.}\label{fig:omni1}
   \end{figure}
     
@@ -95,7 +95,7 @@ This method uses a small python script called spawn\_model to make a service cal
 \textbf{Deliverable: Take a screenshot of the modified cafe.world with your pillar in it.}
 
 \begin{figure}[H]
-  \centering\includegraphics[width=14cm]{lab1figure/mod_pillar.jpg}\vspace{-10pt}
+  \centering\includegraphics[width=14cm]{images/mod_pillar.jpg}\vspace{-10pt}
   \caption{Modifying \mintinline{bash}{cafe.world} with a pillar.}\label{fig:mod_pillar}
   \end{figure}
 
@@ -135,14 +135,14 @@ If you take a closer look at the launch file for the gazebo world, and inspect w
 After that, you can retry the rqt\_tf\_tree command and expect to see the following:
 \begin{figure}[H]
   \vspace{-10pt}
-  \centering\includegraphics[width=14cm]{lab1figure/rqf.png}\vspace{-10pt}
+  \centering\includegraphics[width=14cm]{images/rqf.png}\vspace{-10pt}
   \caption{rqt\_tf\_tree.}\label{fig:rqt}
   \end{figure}
 
 \textbf{Note}: If your rviz visualization has no robot, you can change the fixed frame to "odom", at this point the robot should be visualized in RViz.
 \begin{figure}[H]
   \vspace{-10pt}
-  \centering\includegraphics[width=14cm]{lab1figure/rviz.png}\vspace{-10pt}
+  \centering\includegraphics[width=14cm]{images/rviz.png}\vspace{-10pt}
   \caption{rviz visualization.}\label{fig:rqt1}
   \end{figure}
 
@@ -187,7 +187,7 @@ Then explore the different examples available from the turtlebot3 metapackage. A
       \item Take a screenshot of the resulting rqt\_graph.
     
       \begin{figure}[H]
-        \centering\includegraphics[width=14cm]{lab1figure/rosgraph.png}\vspace{-10pt}
+        \centering\includegraphics[width=14cm]{images/rosgraph.png}\vspace{-10pt}
         \caption{Resulting \mintinline{bash}{rqt} graph.}\label{fig:rosgraph}
         \end{figure}
 
@@ -348,12 +348,12 @@ Create a node to subscribe to the odometry topic to create an x-y plot of the ro
         \begin{figure}[!htb]
           \begin{minipage}{0.48\textwidth}
             \centering
-            \includegraphics[width=\linewidth]{lab1figure/patrol_plot_1.png}\vspace{-10pt}
+            \includegraphics[width=\linewidth]{images/patrol_plot_1.png}\vspace{-10pt}
             \caption{Plotting the patrol \mintinline{bash}{s 1 1}.}\label{Fig:s_1_1}
           \end{minipage}\hfill
           \begin{minipage}{0.48\textwidth}
             \centering
-            \includegraphics[width=\linewidth]{lab1figure/patrol_plot_2.png}\vspace{-10pt}
+            \includegraphics[width=\linewidth]{images/patrol_plot_2.png}\vspace{-10pt}
             \caption{Plotting the patrol \mintinline{bash}{s 1 2}.}\label{Fig:s_1_2}
           \end{minipage}
        \end{figure}
@@ -377,7 +377,7 @@ Create a node to subscribe to the odometry topic to create an x-y plot of the ro
         \textbf{Answer: }Based on the observation, the error will accumulate as the robot makes more turns and patrols more cycles. At first, it only affects the orientation toward which it walks. But later when it's away from the origin, the path will be so deformed that it looks nothing as planned, and sometimes it hits the wall before completing the patrol.
 
         \begin{figure}[H]
-          \centering\includegraphics[width=8cm]{lab1figure/patrol_plot_3.png}\vspace{-10pt}
+          \centering\includegraphics[width=8cm]{images/patrol_plot_3.png}\vspace{-10pt}
           \caption{Plotting the patrol \mintinline{bash}{t 1 3}.}\label{fig:t_1_3}
           \end{figure}
         

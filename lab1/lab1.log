@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.6)  19 JAN 2023 04:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.6)  27 JAN 2023 10:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -871,27 +871,27 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 \openout3 = `lab1.pyg'.
 
  (./_minted-lab1/A9B00CD2F3736302A9579C8BC8E63394D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
-<lab1figure/lab1gazebo.png, id=1, 899.61093pt x 197.98969pt>
-File: lab1figure/lab1gazebo.png Graphic file (type png)
-<use lab1figure/lab1gazebo.png>
-Package pdftex.def Info: lab1figure/lab1gazebo.png  used on input line 78.
+<images/lab1gazebo.png, id=1, 899.61093pt x 197.98969pt>
+File: images/lab1gazebo.png Graphic file (type png)
+<use images/lab1gazebo.png>
+Package pdftex.def Info: images/lab1gazebo.png  used on input line 78.
 (pdftex.def)             Requested size: 398.33858pt x 87.66858pt.
  [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./lab1figure/lab1gazebo.png>]
-<lab1figure/lab1gazebodemo.png, id=14, 493.34312pt x 266.49562pt>
-File: lab1figure/lab1gazebodemo.png Graphic file (type png)
-<use lab1figure/lab1gazebodemo.png>
-Package pdftex.def Info: lab1figure/lab1gazebodemo.png  used on input line 88.
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/lab1gazebo.png>]
+<images/lab1gazebodemo.png, id=14, 493.34312pt x 266.49562pt>
+File: images/lab1gazebodemo.png Graphic file (type png)
+<use images/lab1gazebodemo.png>
+Package pdftex.def Info: images/lab1gazebodemo.png  used on input line 88.
 (pdftex.def)             Requested size: 398.33858pt x 215.18524pt.
-<lab1figure/mod_pillar.jpg, id=15, 736.7525pt x 574.145pt>
-File: lab1figure/mod_pillar.jpg Graphic file (type jpg)
-<use lab1figure/mod_pillar.jpg>
-Package pdftex.def Info: lab1figure/mod_pillar.jpg  used on input line 98.
+<images/mod_pillar.jpg, id=15, 736.7525pt x 574.145pt>
+File: images/mod_pillar.jpg Graphic file (type jpg)
+<use images/mod_pillar.jpg>
+Package pdftex.def Info: images/mod_pillar.jpg  used on input line 98.
 (pdftex.def)             Requested size: 398.33858pt x 310.41916pt.
 \openout4 = `lab1.pyg'.
 
- (./_minted-lab1/E20EA1DB78BF7228060B9C878A7DDE7AD0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex) [2 <./lab1figure/lab1gazebodemo.png>]
+ (./_minted-lab1/E20EA1DB78BF7228060B9C878A7DDE7AD0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex) [2 <./images/lab1gazebodemo.png>]
 \openout3 = `lab1.pyg'.
 
  (./_minted-lab1/FF359205992B9F4DC73DA39A2E5B55E3D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
@@ -902,24 +902,24 @@ Overfull \hbox (13.4792pt too wide) in paragraph at lines 123--124
 \T1/ptm/m/n/12 no-tice there is only a trans-for-ma-tion be-tween the /odom ref-er-ence frame and the /base_footprint.
  []
 
-[3 <./lab1figure/mod_pillar.jpg>]
+[3 <./images/mod_pillar.jpg>]
 \openout3 = `lab1.pyg'.
 
  (./_minted-lab1/B9D22EAE1180FB26297B0E9B7BB8B581D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
 \openout3 = `lab1.pyg'.
 
  (./_minted-lab1/C1FE1DF9A9C06A4794DFDA59B7565DBED0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
-<lab1figure/rqf.png, id=23, 469.755pt x 264.23718pt>
-File: lab1figure/rqf.png Graphic file (type png)
-<use lab1figure/rqf.png>
-Package pdftex.def Info: lab1figure/rqf.png  used on input line 138.
+<images/rqf.png, id=23, 469.755pt x 264.23718pt>
+File: images/rqf.png Graphic file (type png)
+<use images/rqf.png>
+Package pdftex.def Info: images/rqf.png  used on input line 138.
 (pdftex.def)             Requested size: 398.33858pt x 224.0664pt.
-<lab1figure/rviz.png, id=24, 877.2775pt x 441.14813pt>
-File: lab1figure/rviz.png Graphic file (type png)
-<use lab1figure/rviz.png>
-Package pdftex.def Info: lab1figure/rviz.png  used on input line 145.
+<images/rviz.png, id=24, 877.2775pt x 441.14813pt>
+File: images/rviz.png Graphic file (type png)
+<use images/rviz.png>
+Package pdftex.def Info: images/rviz.png  used on input line 145.
 (pdftex.def)             Requested size: 398.33858pt x 200.31209pt.
- [4 <./lab1figure/rqf.png>]
+ [4 <./images/rqf.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
@@ -947,11 +947,11 @@ File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family pcr in TS1 encoding.
 (textcomp)             Default family used instead on input line 4.
-) [5 <./lab1figure/rviz.png>]
-<lab1figure/rosgraph.png, id=34, 1160.08406pt x 135.50626pt>
-File: lab1figure/rosgraph.png Graphic file (type png)
-<use lab1figure/rosgraph.png>
-Package pdftex.def Info: lab1figure/rosgraph.png  used on input line 190.
+) [5 <./images/rviz.png>]
+<images/rosgraph.png, id=34, 1160.08406pt x 135.50626pt>
+File: images/rosgraph.png Graphic file (type png)
+<use images/rosgraph.png>
+Package pdftex.def Info: images/rosgraph.png  used on input line 190.
 (pdftex.def)             Requested size: 398.33858pt x 46.52846pt.
 \openout4 = `lab1.pyg'.
 
@@ -964,7 +964,7 @@ Package pdftex.def Info: lab1figure/rosgraph.png  used on input line 190.
  (./_minted-lab1/C11514D54371D4D40D49F21116D53531D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
 \openout3 = `lab1.pyg'.
 
- (./_minted-lab1/0750FE132D196B7D98C5C92A5F133429D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex) [6 <./lab1figure/rosgraph.png>]
+ (./_minted-lab1/0750FE132D196B7D98C5C92A5F133429D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex) [6 <./images/rosgraph.png>]
 \openout4 = `lab1.pyg'.
 
  (./_minted-lab1/364BCF8CAA38AB095C2115688A081583D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
@@ -1043,10 +1043,10 @@ Package pdftex.def Info: lab1figure/rosgraph.png  used on input line 190.
 \openout3 = `lab1.pyg'.
 
  (./_minted-lab1/BC50695DD73AAC3CAAD97A31B72A3866D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex)
-<lab1figure/patrol_plot_1.png, id=46, 462.528pt x 346.896pt>
-File: lab1figure/patrol_plot_1.png Graphic file (type png)
-<use lab1figure/patrol_plot_1.png>
-Package pdftex.def Info: lab1figure/patrol_plot_1.png  used on input line 351.
+<images/patrol_plot_1.png, id=46, 462.528pt x 346.896pt>
+File: images/patrol_plot_1.png Graphic file (type png)
+<use images/patrol_plot_1.png>
+Package pdftex.def Info: images/patrol_plot_1.png  used on input line 351.
 (pdftex.def)             Requested size: 225.4804pt x 169.11243pt.
 \openout4 = `lab1.pyg'.
 
@@ -1067,10 +1067,10 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 353.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 353.
-<lab1figure/patrol_plot_2.png, id=47, 462.528pt x 346.896pt>
-File: lab1figure/patrol_plot_2.png Graphic file (type png)
-<use lab1figure/patrol_plot_2.png>
-Package pdftex.def Info: lab1figure/patrol_plot_2.png  used on input line 356.
+<images/patrol_plot_2.png, id=47, 462.528pt x 346.896pt>
+File: images/patrol_plot_2.png Graphic file (type png)
+<use images/patrol_plot_2.png>
+Package pdftex.def Info: images/patrol_plot_2.png  used on input line 356.
 (pdftex.def)             Requested size: 225.4804pt x 169.11243pt.
 \openout4 = `lab1.pyg'.
 
@@ -1078,20 +1078,23 @@ Package pdftex.def Info: lab1figure/patrol_plot_2.png  used on input line 356.
 \openout3 = `lab1.pyg'.
 
  (./_minted-lab1/5C78FA4C309F7BEF0AF74E4201FCBA7BD0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex [9])
-<lab1figure/patrol_plot_3.png, id=51, 462.528pt x 346.896pt>
-File: lab1figure/patrol_plot_3.png Graphic file (type png)
-<use lab1figure/patrol_plot_3.png>
-Package pdftex.def Info: lab1figure/patrol_plot_3.png  used on input line 380.
+<images/patrol_plot_3.png, id=51, 462.528pt x 346.896pt>
+File: images/patrol_plot_3.png Graphic file (type png)
+<use images/patrol_plot_3.png>
+Package pdftex.def Info: images/patrol_plot_3.png  used on input line 380.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 \openout4 = `lab1.pyg'.
 
- (./_minted-lab1/78168A1F93DBE2C38CE0D23B991616F3D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex) [10 <./lab1figure/patrol_plot_1.png> <./lab1figure/patrol_plot_2.png> <./lab1figure/patrol_plot_3.png>] (./lab1.aux)
+ (./_minted-lab1/78168A1F93DBE2C38CE0D23B991616F3D0A20D24ED3ABDB4CE8862AD0AFAEAD5.pygtex) [10 <./images/patrol_plot_1.png> <./images/patrol_plot_2.png> <./images/patrol_plot_3.png>] (./lab1.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 runsystem(rm lab1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
  10935 strings out of 476093
- 206638 string characters out of 5791586
+ 206418 string characters out of 5791586
  1858793 words of memory out of 5000000
  30933 multiletter control sequences out of 15000+600000
  544877 words of font info for 84 fonts, out of 8000000 for 9000

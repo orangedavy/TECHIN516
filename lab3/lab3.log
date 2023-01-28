@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.6)  27 JAN 2023 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.6)  28 JAN 2023 02:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -656,6 +656,39 @@ Package color Info: Driver file: pdftex.def on input line 149.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip56
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen160
+\captionmargin=\dimen161
+\caption@leftmargin=\dimen162
+\caption@rightmargin=\dimen163
+\caption@width=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count282
+\c@continuedfloat=\count283
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count284
+\sf@farskip=\skip57
+\sf@captopadj=\dimen168
+\sf@capskip=\skip58
+\sf@nearskip=\skip59
+\c@subfigure=\count285
+\c@subfigure@save=\count286
+\c@lofdepth=\count287
+\c@subtable=\count288
+\c@subtable@save=\count289
+\c@lotdepth=\count290
+\sf@top=\skip60
+\sf@bottom=\skip61
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-11-13 v7.00u Hypertext links for LaTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -691,11 +724,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count282
+\c@section@level=\count291
 )
-\@linkdim=\dimen160
-\Hy@linkcounter=\count283
-\Hy@pagecounter=\count284
+\@linkdim=\dimen169
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-11-13 v7.00u Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -705,7 +738,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count285
+\Hy@SavedSpaceFactor=\count294
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-11-13 v7.00u Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -718,21 +751,21 @@ Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4410.
-\c@Hy@tempcnt=\count286
+\c@Hy@tempcnt=\count295
  (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen161
+\XeTeXLinkMargin=\dimen170
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count287
-\Field@Width=\dimen162
-\Fld@charsize=\dimen163
+\Fld@menulength=\count296
+\Field@Width=\dimen171
+\Fld@charsize=\dimen172
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -744,9 +777,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6057.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count288
-\c@Item=\count289
-\c@Hfootnote=\count290
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -755,8 +788,8 @@ File: hpdftex.def 2022-11-13 v7.00u Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count291
-\c@bookmark@seq@number=\count292
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
  (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -764,7 +797,13 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip57
+\Hy@SectionHShift=\skip62
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count302
+\multirow@dima=\skip64
+\bigstrutjot=\dimen173
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -790,14 +829,14 @@ Package: minted 2022/12/12 v2.7 Yet another Pygments shim for LaTeX
 Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
  (/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count293
+\etb@tempcnta=\count303
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count294
+\FV@CodeLineNo=\count304
 \FV@InFile=\read3
 \FV@TabBox=\box55
-\c@FancyVerbLine=\count295
-\FV@StepNumber=\count296
+\c@FancyVerbLine=\count305
+\FV@StepNumber=\count306
 \FV@OutFile=\write3
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
@@ -805,60 +844,60 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2022/07/30 line numbers on paragraphs v5.0
-\linenopenalty=\count297
+\linenopenalty=\count307
 \output=\toks32
-\linenoprevgraf=\count298
-\linenumbersep=\dimen164
-\linenumberwidth=\dimen165
-\c@linenumber=\count299
-\c@pagewiselinenumber=\count300
-\c@LN@truepage=\count301
-\c@internallinenumber=\count302
-\c@internallinenumbers=\count303
-\quotelinenumbersep=\dimen166
-\bframerule=\dimen167
-\bframesep=\dimen168
+\linenoprevgraf=\count308
+\linenumbersep=\dimen174
+\linenumberwidth=\dimen175
+\c@linenumber=\count309
+\c@pagewiselinenumber=\count310
+\c@LN@truepage=\count311
+\c@internallinenumber=\count312
+\c@internallinenumbers=\count313
+\quotelinenumbersep=\dimen176
+\bframerule=\dimen177
+\bframesep=\dimen178
 \bframebox=\box56
-\linenoamsmath@ams@eqpen=\count304
+\linenoamsmath@ams@eqpen=\count314
 LaTeX Info: Redefining \\ on input line 3114.
 )
-\c@FV@TrueTabGroupLevel=\count305
-\c@FV@TrueTabCounter=\count306
+\c@FV@TrueTabGroupLevel=\count315
+\c@FV@TrueTabCounter=\count316
 \FV@TabBox@Group=\box57
-\FV@TmpLength=\skip58
-\c@FV@HighlightLinesStart=\count307
-\c@FV@HighlightLinesStop=\count308
-\FV@LoopCount=\count309
+\FV@TmpLength=\skip65
+\c@FV@HighlightLinesStart=\count317
+\c@FV@HighlightLinesStop=\count318
+\FV@LoopCount=\count319
 \FV@NCharsBox=\box58
-\FV@BreakIndent=\dimen169
-\FV@BreakIndentNChars=\count310
-\FV@BreakSymbolSepLeft=\dimen170
-\FV@BreakSymbolSepLeftNChars=\count311
-\FV@BreakSymbolSepRight=\dimen171
-\FV@BreakSymbolSepRightNChars=\count312
-\FV@BreakSymbolIndentLeft=\dimen172
-\FV@BreakSymbolIndentLeftNChars=\count313
-\FV@BreakSymbolIndentRight=\dimen173
-\FV@BreakSymbolIndentRightNChars=\count314
-\c@FancyVerbLineBreakLast=\count315
+\FV@BreakIndent=\dimen179
+\FV@BreakIndentNChars=\count320
+\FV@BreakSymbolSepLeft=\dimen180
+\FV@BreakSymbolSepLeftNChars=\count321
+\FV@BreakSymbolSepRight=\dimen181
+\FV@BreakSymbolSepRightNChars=\count322
+\FV@BreakSymbolIndentLeft=\dimen182
+\FV@BreakSymbolIndentLeftNChars=\count323
+\FV@BreakSymbolIndentRight=\dimen183
+\FV@BreakSymbolIndentRightNChars=\count324
+\c@FancyVerbLineBreakLast=\count325
 \FV@LineBox=\box59
 \FV@LineIndentBox=\box60
-\c@FV@BreakBufferDepth=\count316
-\FV@LineWidth=\dimen174
+\c@FV@BreakBufferDepth=\count326
+\FV@LineWidth=\dimen184
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count317
-\calc@Bcount=\count318
-\calc@Adimen=\dimen175
-\calc@Bdimen=\dimen176
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
+\calc@Acount=\count327
+\calc@Bcount=\count328
+\calc@Adimen=\dimen185
+\calc@Bdimen=\dimen186
+\calc@Askip=\skip66
+\calc@Bskip=\skip67
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count319
-\calc@Cskip=\skip61
+\calc@Ccount=\count329
+\calc@Cskip=\skip68
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
@@ -875,20 +914,20 @@ runsystem(uname -s > "lab3.w18")...executed.
 runsystem(rm -- "lab3.w18")...executed.
 
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count320
-\decimalpart=\count321
+\integerpart=\count330
+\decimalpart=\count331
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip62
-\fb@frw=\dimen177
-\fb@frh=\dimen178
-\FrameRule=\dimen179
-\FrameSep=\dimen180
+\OuterFrameSep=\skip69
+\fb@frw=\dimen187
+\fb@frh=\dimen188
+\FrameRule=\dimen189
+\FrameSep=\dimen190
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count322
+\c@float@type=\count332
 \float@exts=\toks33
 \float@box=\box61
 \@float@everytoks=\toks34
@@ -897,10 +936,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \minted@appexistsfile=\read4
 \minted@bgbox=\box63
 \minted@code=\write4
-\c@minted@FancyVerbLineTemp=\count323
-\c@minted@pygmentizecounter=\count324
+\c@minted@FancyVerbLineTemp=\count333
+\c@minted@pygmentizecounter=\count334
 \@float@every@listing=\toks35
-\c@listing=\count325
+\c@listing=\count335
 )
 runsystem(mkdir -p _minted-lab3)...executed.
 
@@ -910,45 +949,41 @@ runsystem(rm lab3.aex)...executed.
 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count326
+\l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box64
-) (./lab3.aux
-
-LaTeX Warning: Label `fig:pid' multiply defined.
-
-)
+) (./lab3.aux)
 \openout1 = `lab3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count327
-\scratchdimen=\dimen181
+\scratchcounter=\count337
+\scratchdimen=\dimen191
 \scratchbox=\box65
-\nofMPsegments=\count328
-\nofMParguments=\count329
+\nofMPsegments=\count338
+\nofMParguments=\count339
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count330
-\MPscratchDim=\dimen182
-\MPnumerator=\count331
-\makeMPintoPDFobject=\count332
+\MPscratchCnt=\count340
+\MPscratchDim=\dimen192
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
 \everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -956,8 +991,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count333
-Package hyperref Info: Link coloring OFF on input line 48.
+\c@lstlisting=\count343
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 50.
  (./lab3.out) (./lab3.out)
 \@outlinefile=\write5
 \openout5 = `lab3.out'.
@@ -972,26 +1012,21 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 <images/gmapping.png, id=36, 462.528pt x 346.896pt>
 File: images/gmapping.png Graphic file (type png)
 <use images/gmapping.png>
-Package pdftex.def Info: images/gmapping.png  used on input line 87.
+Package pdftex.def Info: images/gmapping.png  used on input line 90.
 (pdftex.def)             Requested size: 398.33858pt x 298.76936pt.
 \openout4 = `lab3.pyg'.
 
-runsystem(pygmentize -l 'bash' -f latex -P commandprefix=PYG -F tokenmerge -P stripnl='False' -o _minted-lab3/2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex lab3.pyg)...executed.
+ (./_minted-lab3/2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
 
  (./_minted-lab3/2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<images/map.jpeg, id=51, 1945.2675pt x 1227.58624pt>
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./images/gmapping.png>]
+<images/map.jpeg, id=59, 1945.2675pt x 1227.58624pt>
 File: images/map.jpeg Graphic file (type jpg)
 <use images/map.jpeg>
-Package pdftex.def Info: images/map.jpeg  used on input line 109.
+Package pdftex.def Info: images/map.jpeg  used on input line 116.
 (pdftex.def)             Requested size: 398.33858pt x 251.37584pt.
- [2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.112 
-       <./images/gmapping.png>]
 \openout3 = `lab3.pyg'.
 
  (./_minted-lab3/A05FB3C0BA488F1DB7D20D7D0D25D1C192B9B3AE93A366C4D505EB18BBA54A02.pygtex)
@@ -1003,77 +1038,110 @@ l.112
  (./_minted-lab3/ACA9AE1A8EFBB6759AF657B78A493F0292B9B3AE93A366C4D505EB18BBA54A02.pygtex)
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/7DA889EA05714342BEA57373BA99CDA092B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+ (./_minted-lab3/7DA889EA05714342BEA57373BA99CDA092B9B3AE93A366C4D505EB18BBA54A02.pygtex) [3 <./images/map.jpeg>]
+<images/hex_map.png, id=68, 188.20313pt x 164.615pt>
+File: images/hex_map.png Graphic file (type png)
+<use images/hex_map.png>
+Package pdftex.def Info: images/hex_map.png  used on input line 148.
+(pdftex.def)             Requested size: 211.38832pt x 184.90758pt.
+<images/gix_map.png, id=69, 122.4575pt x 108.405pt>
+File: images/gix_map.png Graphic file (type png)
+<use images/gix_map.png>
+Package pdftex.def Info: images/gix_map.png  used on input line 150.
+(pdftex.def)             Requested size: 211.38832pt x 187.1361pt.
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/DF0821417A0A603D740C5D8DA18933BD92B9B3AE93A366C4D505EB18BBA54A02.pygtex [3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.4 \end{Verbatim}
-                   <./images/map.jpeg>])
-<images/map2.jpeg, id=69, 2336.73pt x 1423.3175pt>
+ (./_minted-lab3/DF0821417A0A603D740C5D8DA18933BD92B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+<images/map2.jpeg, id=70, 2336.73pt x 1423.3175pt>
 File: images/map2.jpeg Graphic file (type jpg)
 <use images/map2.jpeg>
-Package pdftex.def Info: images/map2.jpeg  used on input line 147.
+Package pdftex.def Info: images/map2.jpeg  used on input line 167.
 (pdftex.def)             Requested size: 398.33858pt x 242.61232pt.
- [4
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.172     \item L
-                 aunch a simulated turtlebot3 in the stage\_1 world. <./images/map2.jpeg>]
+ [4 <./images/hex_map.png> <./images/gix_map.png>] [5 <./images/map2.jpeg>]
 \openout3 = `lab3.pyg'.
 
  (./_minted-lab3/D324C0F948CD9732AA7BA4F9684CD5DE92B9B3AE93A366C4D505EB18BBA54A02.pygtex)
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/836D7043FB9E16E66E379DA63079875392B9B3AE93A366C4D505EB18BBA54A02.pygtex
+ (./_minted-lab3/0E24A6A95C0DD0F84BA7556154DD97B592B9B3AE93A366C4D505EB18BBA54A02.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ))
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/82CC5C57C2B696B61DE9605D3EA946B292B9B3AE93A366C4D505EB18BBA54A02.pygtex) [5]
+ (./_minted-lab3/BC8167C22A15897ED6E8E30B78BCA21092B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/B6CD923E3B9F001AB14BC69ACC4568A892B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/401B30E3B8B5D629635A5C613CDB791992B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 232.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 232.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 232.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 232.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 232.
+ [6]
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/E0748DA79C2E1C80BB9BC26D1215617392B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/85B8CC3CDAB666CFB18DEF06664C663892B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/85B8CC3CDAB666CFB18DEF06664C663892B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/2785F1DB8973D6DB7817B42AB027AFF092B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/0719543B296BFFDE4FBE0342D929CA3C92B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+\openout4 = `lab3.pyg'.
+
+ (./_minted-lab3/8ABF56DD542C2DC45B7EFD4F5FDA170E92B9B3AE93A366C4D505EB18BBA54A02.pygtex) [7] [8]
 \openout3 = `lab3.pyg'.
 
  (./_minted-lab3/2A56D2B0566D0171C9182E683936AB2992B9B3AE93A366C4D505EB18BBA54A02.pygtex)
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/22B5B79B24DDCD3BBF9AD866C565EA2392B9B3AE93A366C4D505EB18BBA54A02.pygtex [6])
-<images/pidparameter.png, id=103, 483.30562pt x 216.30812pt>
+ (./_minted-lab3/22B5B79B24DDCD3BBF9AD866C565EA2392B9B3AE93A366C4D505EB18BBA54A02.pygtex)
+<images/pidparameter.png, id=121, 483.30562pt x 216.30812pt>
 File: images/pidparameter.png Graphic file (type png)
 <use images/pidparameter.png>
-Package pdftex.def Info: images/pidparameter.png  used on input line 259.
+Package pdftex.def Info: images/pidparameter.png  used on input line 338.
 (pdftex.def)             Requested size: 398.33858pt x 178.28806pt.
- [7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.272     \item M
-                 ention at least 2 applications where PID controllers would ... <./images/pidparameter.png>] [8] (./lab3.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+ [9] [10 <./images/pidparameter.png>] (./lab3.aux)
 Package rerunfilecheck Info: File `lab3.out' has not changed.
 (rerunfilecheck)             Checksum: B30F3052D651FF29BB42B47C37A42C95;2318.
 runsystem(rm lab3.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 16736 strings out of 476093
- 283180 string characters out of 5791586
- 1858793 words of memory out of 5000000
- 36740 multiletter control sequences out of 15000+600000
- 537020 words of font info for 53 fonts, out of 8000000 for 9000
+ 18391 strings out of 476093
+ 317928 string characters out of 5791586
+ 1862793 words of memory out of 5000000
+ 38311 multiletter control sequences out of 15000+600000
+ 546259 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,7n,90p,630b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on lab3.pdf (8 pages, 946698 bytes).
+ 85i,10n,90p,666b,892s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on lab3.pdf (10 pages, 984476 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 58 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 95 words of extra memory for PDF output out of 10000 (max. 10000000)
 

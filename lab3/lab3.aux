@@ -19,21 +19,25 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1}Sensor inaccuracies in the physical robot}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Connecting to the physical robot}{1}{subsection.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Errors in odometry in real world operation}{1}{subsection.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Plotting robot patrol of \FVExtraRobustCommand \RobustMintInline \FVExtraAlwaysUnexpanded {\FVExtraUnexpandedReadStarOArgMArgBVArg {bash}{s 0.8 1}} on a 2D graph.}}{2}{figure.1}\protected@file@percent }
-\newlabel{fig:gmapping}{{1}{2}{Plotting robot patrol of \mintinline {bash}{s 0.8 1} on a 2D graph}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Plotting a square robotic patrol with the command \FVExtraRobustCommand \RobustMintInline \FVExtraAlwaysUnexpanded {\FVExtraUnexpandedReadStarOArgMArgBVArg {bash}{s 0.8 1}}.\relax }}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:gmapping}{{1}{2}{Plotting a square robotic patrol with the command \mintinline {bash}{s 0.8 1}.\relax }{figure.caption.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Errors in laser readings in real world operation}{2}{subsection.1.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Start Position Indication}}{3}{figure.2}\protected@file@percent }
-\newlabel{fig:pid}{{2}{3}{Start Position Indication}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 2DNavGoal Position Indication}}{4}{figure.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Introduction to control strategies in robot navigation }{4}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Executing robot motions in open-loop control}{5}{subsection.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Executing robot motions in closed-loop control}{6}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Extra credit: Simulated Wall-following behavior}{6}{section.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Parameters for PID.}}{7}{figure.4}\protected@file@percent }
-\newlabel{fig:pid}{{4}{7}{Parameters for PID}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Start Position Indication\relax }}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:pid_1}{{2}{3}{Start Position Indication\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparing two maps achieved in different contexts.\relax }}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:map_pgm}{{3}{4}{Comparing two maps achieved in different contexts.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Digitally simulated map of the hexagon area.}}}{4}{subfigure.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Physically implemented map of the GIX setup.}}}{4}{subfigure.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 2DNavGoal Position Indication\relax }}{5}{figure.caption.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Introduction to control strategies in robot navigation }{6}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Executing robot motions in open-loop control}{6}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Executing robot motions in closed-loop control}{8}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Extra credit: Simulated Wall-following behavior}{9}{section.3}\protected@file@percent }
 \gdef\minted@oldcachelist{,
   default.pygstyle,
   2F5A81ED2934D20A4EB06D4BCC98B67F92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   A05FB3C0BA488F1DB7D20D7D0D25D1C192B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   52FA5C80F131C3F07E348290B2EDFB3392B9B3AE93A366C4D505EB18BBA54A02.pygtex,
@@ -41,8 +45,18 @@
   7DA889EA05714342BEA57373BA99CDA092B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   DF0821417A0A603D740C5D8DA18933BD92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   D324C0F948CD9732AA7BA4F9684CD5DE92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
-  836D7043FB9E16E66E379DA63079875392B9B3AE93A366C4D505EB18BBA54A02.pygtex,
-  82CC5C57C2B696B61DE9605D3EA946B292B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  0E24A6A95C0DD0F84BA7556154DD97B592B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  BC8167C22A15897ED6E8E30B78BCA21092B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  B6CD923E3B9F001AB14BC69ACC4568A892B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  401B30E3B8B5D629635A5C613CDB791992B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  E0748DA79C2E1C80BB9BC26D1215617392B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  85B8CC3CDAB666CFB18DEF06664C663892B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  85B8CC3CDAB666CFB18DEF06664C663892B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  2785F1DB8973D6DB7817B42AB027AFF092B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  0719543B296BFFDE4FBE0342D929CA3C92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
+  8ABF56DD542C2DC45B7EFD4F5FDA170E92B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   2A56D2B0566D0171C9182E683936AB2992B9B3AE93A366C4D505EB18BBA54A02.pygtex,
   22B5B79B24DDCD3BBF9AD866C565EA2392B9B3AE93A366C4D505EB18BBA54A02.pygtex}
-\gdef \@abspage@last{8}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Parameters for PID.\relax }}{10}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:pid_2}{{5}{10}{Parameters for PID.\relax }{figure.caption.6}{}}
+\gdef \@abspage@last{10}

@@ -38,7 +38,7 @@
 
 
 \Scribe{}
-\Lecturer{Queenie Qiu, John Raiti. Student: Fill your name}
+\Lecturer{Queenie Qiu, John Raiti. Student: \textbf{Shucheng Guo, Harry Tung, Joshua Sanchez}}
 \LectureNumber{3}
 \LectureDate{DATE: Jan 26th. 2023}
 \LectureTitle{Physical Implementations and Introduction to Control}
@@ -66,21 +66,34 @@ In this section, we will use the patrol example that we have explored in the Lab
 \textbf{Deliverables:}
 \begin{enumerate}
     
-
-\item Run the patrol example with the following parameters: square length 0.8m and 1 iteration. In an additional terminal run the plot\_odom.py file.
+    \item Run the patrol example with the following parameters: square length 0.8m and 1 iteration. In an additional terminal run the plot\_odom.py file.
+    
     \begin{minted}{bash}
       $ roslaunch turtlebot3_example turtlebot3_client.launch
       
       $ rosrun turtlebot3_example turtlebot3_server
     \end{minted}
 
-\begin{enumerate}
-    \item Make notes about robot behaviors: do the wheels turn at the same rate when moving forward? Were the 90 degree turns accurate? Does the robot return to the starting position?
-    \item Plot the x-y position of the robot against the “ground truth” and take a screenshot.
-    \item Compare the graph to the one obtained in Lab1. Mention differences. Are odom errors larger or smaller? Mention what can be influencing the results.
+    \begin{enumerate}
+
+        \item Make notes about robot behaviors: do the wheels turn at the same rate when moving forward? Were the 90 degree turns accurate? Does the robot return to the starting position?
+        
+        \textbf{Answer: }The wheels would rotate at the same rate when moving forward without the impact of other factors, e.g. low battery, facing obstacles.
+        \\The turns, however, were far from accurate. The robot wouldn't make perpendicular turns in square patrols, not to mention gradual ones in circular turns. 
+
+        \item Plot the x-y position of the robot against the “ground truth” and take a screenshot.
+        
+        \begin{figure}[H]
+          \centering\includegraphics[width=14cm]{images/gmapping.png}\vspace{-10pt}
+          \caption{Plotting robot patrol of \mintinline{bash}{s 0.8 1} on a 2D graph.}\label{fig:gmapping}
+          \end{figure}
+
+        \item Compare the graph to the one obtained in Lab1. Mention differences. Are odom errors larger or smaller? Mention what can be influencing the results.
     
-\end{enumerate}
-\item What can be done to improve the accuracy of sensor data or to get better estimation of robots' positions and orientations?
+    \end{enumerate}
+
+    \item What can be done to improve the accuracy of sensor data or to get better estimation of robots' positions and orientations?
+    
 
 
 \end{enumerate}

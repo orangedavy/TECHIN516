@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.6)  26 JAN 2023 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.6)  27 JAN 2023 11:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -969,14 +969,29 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 1.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
-<images/map.jpeg, id=36, 1945.2675pt x 1227.58624pt>
-File: images/map.jpeg Graphic file (type jpg)
-<use images/map.jpeg>
-Package pdftex.def Info: images/map.jpeg  used on input line 96.
-(pdftex.def)             Requested size: 398.33858pt x 251.37584pt.
- [1
+<images/gmapping.png, id=36, 462.528pt x 346.896pt>
+File: images/gmapping.png Graphic file (type png)
+<use images/gmapping.png>
+Package pdftex.def Info: images/gmapping.png  used on input line 87.
+(pdftex.def)             Requested size: 398.33858pt x 298.76936pt.
+\openout4 = `lab3.pyg'.
+
+runsystem(pygmentize -l 'bash' -f latex -P commandprefix=PYG -F tokenmerge -P stripnl='False' -o _minted-lab3/2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex lab3.pyg)...executed.
+
+ (./_minted-lab3/2CE722E0B7684E0411E7F14EA15279EC92B9B3AE93A366C4D505EB18BBA54A02.pygtex) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<images/map.jpeg, id=51, 1945.2675pt x 1227.58624pt>
+File: images/map.jpeg Graphic file (type jpg)
+<use images/map.jpeg>
+Package pdftex.def Info: images/map.jpeg  used on input line 109.
+(pdftex.def)             Requested size: 398.33858pt x 251.37584pt.
+ [2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.112 
+       <./images/gmapping.png>]
 \openout3 = `lab3.pyg'.
 
  (./_minted-lab3/A05FB3C0BA488F1DB7D20D7D0D25D1C192B9B3AE93A366C4D505EB18BBA54A02.pygtex)
@@ -991,22 +1006,22 @@ Package pdftex.def Info: images/map.jpeg  used on input line 96.
  (./_minted-lab3/7DA889EA05714342BEA57373BA99CDA092B9B3AE93A366C4D505EB18BBA54A02.pygtex)
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/DF0821417A0A603D740C5D8DA18933BD92B9B3AE93A366C4D505EB18BBA54A02.pygtex [2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \begin{Verbatim}[commandchars=\\\{\}]
-                                          <./images/map.jpeg>])
-<images/map2.jpeg, id=60, 2336.73pt x 1423.3175pt>
-File: images/map2.jpeg Graphic file (type jpg)
-<use images/map2.jpeg>
-Package pdftex.def Info: images/map2.jpeg  used on input line 134.
-(pdftex.def)             Requested size: 398.33858pt x 242.61232pt.
- [3
+ (./_minted-lab3/DF0821417A0A603D740C5D8DA18933BD92B9B3AE93A366C4D505EB18BBA54A02.pygtex [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.159     \item L
+l.4 \end{Verbatim}
+                   <./images/map.jpeg>])
+<images/map2.jpeg, id=69, 2336.73pt x 1423.3175pt>
+File: images/map2.jpeg Graphic file (type jpg)
+<use images/map2.jpeg>
+Package pdftex.def Info: images/map2.jpeg  used on input line 147.
+(pdftex.def)             Requested size: 398.33858pt x 242.61232pt.
+ [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.172     \item L
                  aunch a simulated turtlebot3 in the stage\_1 world. <./images/map2.jpeg>]
 \openout3 = `lab3.pyg'.
 
@@ -1020,24 +1035,24 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ))
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/82CC5C57C2B696B61DE9605D3EA946B292B9B3AE93A366C4D505EB18BBA54A02.pygtex) [4]
+ (./_minted-lab3/82CC5C57C2B696B61DE9605D3EA946B292B9B3AE93A366C4D505EB18BBA54A02.pygtex) [5]
 \openout3 = `lab3.pyg'.
 
  (./_minted-lab3/2A56D2B0566D0171C9182E683936AB2992B9B3AE93A366C4D505EB18BBA54A02.pygtex)
 \openout3 = `lab3.pyg'.
 
- (./_minted-lab3/22B5B79B24DDCD3BBF9AD866C565EA2392B9B3AE93A366C4D505EB18BBA54A02.pygtex [5])
-<images/pidparameter.png, id=94, 483.30562pt x 216.30812pt>
+ (./_minted-lab3/22B5B79B24DDCD3BBF9AD866C565EA2392B9B3AE93A366C4D505EB18BBA54A02.pygtex [6])
+<images/pidparameter.png, id=103, 483.30562pt x 216.30812pt>
 File: images/pidparameter.png Graphic file (type png)
 <use images/pidparameter.png>
-Package pdftex.def Info: images/pidparameter.png  used on input line 246.
+Package pdftex.def Info: images/pidparameter.png  used on input line 259.
 (pdftex.def)             Requested size: 398.33858pt x 178.28806pt.
- [6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+ [7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.259     \item M
-                 ention at least 2 applications where PID controllers would ... <./images/pidparameter.png>] [7] (./lab3.aux)
+l.272     \item M
+                 ention at least 2 applications where PID controllers would ... <./images/pidparameter.png>] [8] (./lab3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1047,18 +1062,18 @@ runsystem(rm lab3.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 16717 strings out of 476093
- 282468 string characters out of 5791586
- 1860793 words of memory out of 5000000
- 36729 multiletter control sequences out of 15000+600000
- 534252 words of font info for 51 fonts, out of 8000000 for 9000
+ 16736 strings out of 476093
+ 283180 string characters out of 5791586
+ 1858793 words of memory out of 5000000
+ 36740 multiletter control sequences out of 15000+600000
+ 537020 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,7n,90p,630b,790s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on lab3.pdf (7 pages, 930171 bytes).
+ 85i,7n,90p,630b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on lab3.pdf (8 pages, 946698 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 56 named destinations out of 1000 (max. 500000)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

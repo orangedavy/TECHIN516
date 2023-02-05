@@ -1,9 +1,7 @@
 /.DS_Store
+.gitignore
 lab2/submissions/route_planning_with_pillar.mov
 lab2/submissions/route_planning_without_pillar.mov
-scatch.ipynb
 lab3/submissions/forward_motion_feedback.mov
-lab4/.DS_Store
-.gitignore
 lab4/path_planning_dijkstra.mov
 lab4/path_planning_a-star.mov

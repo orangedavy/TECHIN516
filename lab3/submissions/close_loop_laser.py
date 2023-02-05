@@ -19,10 +19,10 @@ class laser_closeloop:
         self.debug = False
         # TODO: Add the correct command to subscribe to the scan topic
         # Use rospy.Subscriber(topic,msg_type,callback_function)
-        self.sub = <configure subscriber>
+        self.sub = rospy.Subscriber('/scan', LaserScan, self.scan_callback)
         # TODO: Add the correct command to publish velocity values
         # Use rospy.Publisher(topic,msg_type,queue_size typically 10)
-        self.pub = <configure publisher>
+        self.pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
         self.front_value_list = []
         self.motion_move = Twist()
         self.motion_stop = Twist()
@@ -34,17 +34,17 @@ class laser_closeloop:
     def scan_callback(self,msg):
         # The index of the front value might need to be changed.
         current_front_value = msg.ranges[0]
-        #print 'current_front_value', current_front_value
+        print('current_front_value', current_front_value, self.front_value_list)
         self.front_value_list.append(current_front_value)
         
         if len(self.front_value_list) > 2:
             # TODO: Fill out the if condition to check whether the last item on the list
             # is smaller than the substraction between the first one and the desired distance to be traveled
-            if (<CONDITION TO STOP>):
-                self.pub_move.publish(self.motion_stop)
+            if self.front_value_list[-1] < (self.front_value_list[0] - 1.5):
+                self.pub.publish(self.motion_stop)
                 rospy.signal_shutdown("Reached goal")
             else:
-                self.pub_move.publish(self.motion_move)
+                self.pub.publish(self.motion_move)
                 if self.debug == True:
                     print("Value ahead: ", current_front_value)
                     print("Distance traveled: ", self.front_value_list[0] - self.front_value_list[-1])

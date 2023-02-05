@@ -20,10 +20,10 @@ class odom_closeloop:
         self.debug = False
         # TODO: Add the correct command to subscribe to the odom topic
         # Use rospy.Subscriber(topic,msg_type,callback_function)
-        self.sub = <configure subscriber>
+        self.sub = rospy.Subscriber('/odom', Odometry, self.odom_callback)
         # TODO: Add the correct command to publish velocity values
         # Use rospy.Publisher(topic,msg_type,queue_size typically 10)
-        self.pub = <configure publisher>
+        self.pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
         self.position_x_list = []
         self.motion_move = Twist()
         self.motion_stop = Twist()
@@ -39,7 +39,7 @@ class odom_closeloop:
         if len(self.position_x_list) > 2:
             # TODO: Fill out the if condition to check whether the last item on the list
             # is greater than the first one plus the desired distance to be traveled
-            if (<CONDITION TO STOP>):
+            if self.position_x_list[-1] > (self.position_x_list[0] + 1.5):
                 self.pub.publish(self.motion_stop)
                 rospy.signal_shutdown("Reached goal")
             else:

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYGZdl{}\PYG{+w}{ }rosdep\PYG{+w}{ }install\PYG{+w}{ }\PYGZhy{}\PYGZhy{}from\PYGZhy{}paths\PYG{+w}{ }src\PYG{+w}{ }\PYGZhy{}\PYGZhy{}ignore\PYGZhy{}src\PYG{+w}{ }\PYGZhy{}r\PYG{+w}{ }\PYGZhy{}y
+\end{Verbatim}

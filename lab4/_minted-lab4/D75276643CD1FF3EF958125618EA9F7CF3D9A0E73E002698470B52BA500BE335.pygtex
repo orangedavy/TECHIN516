@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }global\PYGZus{}planner\PYG{+w}{ }test\PYGZus{}planner.launch
+\end{Verbatim}

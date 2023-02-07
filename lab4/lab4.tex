@@ -257,7 +257,7 @@ In previous labs, turtlebot3\_navigation.launch is launched before we used the 2
             \subfloat[Dijkstra]{\includegraphics[width=.48\columnwidth]{images/odom_plot_dijkstra.png}}
             \subfloat[A* Search]{\includegraphics[width=.48\columnwidth]{images/odom_plot_a-star.png}}
             \caption{Plotting robot's paths planned by different algorithms.}
-            \label{fig:odom_plot}
+            \label{fig:odom_plot}\vspace{-10pt}
         \end{figure}
 
         \begin{figure}[h!]
@@ -266,7 +266,7 @@ In previous labs, turtlebot3\_navigation.launch is launched before we used the 2
             \hspace{3ex}
             \subfloat[A* Search]{\includegraphics[width=.4\columnwidth]{images/costmap_a-star.png}}
             \caption{Calculating potentials by different algorithms.}
-            \label{fig:potentials}
+            \label{fig:potentials}\vspace{-10pt}
         \end{figure}
 
     \end{enumerate}
@@ -280,8 +280,9 @@ In previous labs, turtlebot3\_navigation.launch is launched before we used the 2
         
         \begin{figure}[h]
             \centering
-            \includegraphics[width=10.3cm]{images/obstacle_pose.png}
-            \caption{Position of pillar obstacle.}\label{fig:obstacle}
+            \includegraphics[width=9.5cm]{images/obstacle_pose.png}
+            \caption{Position of pillar obstacle.}
+            \label{fig:obstacle}\vspace{-10pt}
         \end{figure}
         
         \item Describe the actions of the robot: 
@@ -322,19 +323,35 @@ Instead of providing a sequence of 4 points as navigation goals, the physical im
         \begin{enumerate}
             \item the travel time (rough estimation is ok.)
             
+            \textbf{Answer: }The travel time for the robot to travel between the black and blue crosses using the global\_planner with Dijkstra algorithm is $36s$. Fast as it is, traveling with A* Search is even faster, which brings the total time down to $26s$. It's worth mentioning that path planning with A* broke the record, as it's two times faster than in the last lab patroling without a planning algorithm.
+
             \item If any collisions occur, note them and comment on possible causes of the collisions.
+            
+            \textbf{Answer: }In the first few attempts, some possible collisions were detected in the laser scan and costmap, before the robot was blocked. The main reason for collisions is obstacles, which include those outlined on the map and those unexpected on the path.
+
+            Most of the time, misalignment between map and laser scan data and inappropriate occupancy grid threshold are to blame for the robot bumping into known objects. For other cases, the robot could be moving too fast to stop before encountering a block not considered by the map.
+
         \end{enumerate}
     
     \item Reset the robot to the initial position $P_0$, and then add an obstacle in the map environment. Attempt the navigation to $P_1$ and comment on the execution using both planners:
     
     \begin{enumerate}
         \item Does the robot reach its intended goal in A* and Djikstra?
+        
+        \textbf{Answer: }Depending on the location of the obstacle, the robot demonstrated different capabilities to bypass it. If a relatively big obstable (tissue box size) stands in the path taken in the previous question, the robot won't be able to reach the goal with both algorithms. In the failed attempts, they repeatedly replan the path and walked back and forth when the obstacle was detected, before the action was aborted.
+
+        For once, A* Search succeeded in reaching the goal after tilting the angle of its path a bit every time. The entire process took around 5 minutes.
+
         \item What did you observe from the global planner and local planner?
+        
+        \textbf{Answer: }As described in the answer for 3.2.2.2, the global planner focused on the full path, while the local one dynamically edits the path to avoid detected obstacles.
+
+        The global planner determines one path before execution and slowly switches to another in response to obstacles. As Dijkstra planned relatively smooth routes, A* appeared somewhat confusing. Its routes were more aggressive that left less space from obstacles and underestimated the size of the robot. After warnings, the routes were modified that followed the walls, which caused even more collision and stagnation.
+
+        The local planner looks forward for a certain range to accommodate the obstacles, but not long enough to completely avoid them. Most of the time, the local planner only radically switched the orientation of the robot to make it walk back and forth, hoping to conjure up a path that would work. It didn't fully explore the vicinity of the obstacle to find the directions that effectively bypass it. This is expected to change with a more advanced planning algorithm and better local planner configurations.
 
     \end{enumerate}
 
     \end{enumerate}
-
-
 
 \end{document}

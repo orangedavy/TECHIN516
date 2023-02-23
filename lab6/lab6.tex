@@ -1,0 +1,308 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{scribe}
+\usepackage{listings}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage[svgnames]{xcolor}
+\usepackage{color}
+% \definecolor{light-gray}{gray}{0.90}
+% \lstset{backgroundcolor=\color{light-gray},showlines=true}
+
+% \usepackage{xcolor}
+% \usepackage{listings}
+
+% \lstdefinestyle{BashInputStyle}{
+%   language=bash,
+%   basicstyle=\small\sffamily,
+%   numbers=left,
+%   numberstyle=\tiny,
+%   numbersep=3pt,
+%   frame=tb,
+%   columns=fullflexible,
+%   backgroundcolor=\color{yellow!20},
+%   linewidth=0.9\linewidth,
+%   xleftmargin=0.1\linewidth
+% }
+
+
+\usepackage{minted}
+\setminted{fontsize=\footnotesize,baselinestretch=0.5}
+
+
+
+\Scribe{}
+\Lecturer{Queenie Qiu, John Raiti. Student: Fill in your name}
+\LectureNumber{6}
+\LectureDate{DATE: Feb 23rd. 2023}
+\LectureTitle{Arm Kinematics in the Physical Robot}
+
+\lstset{style=mystyle}
+
+
+\begin{document}
+	\MakeScribeTop
+
+%#############################################################
+%#############################################################
+%#############################################################
+%#############################################################
+
+\section{Learning Objectives}
+\begin{enumerate}
+    \item Learn the difference between arm motions in task-space and configuration-space
+    
+    \item Familiarize yourself with both forward and inverse kinematics in a robotic arm with 6 revolute joints.
+    
+    \item Familiarize yourself with MoveIt! as a ROS component with a physical Kinova Arm gen3\_lite.
+\end{enumerate}
+
+
+\section{Introducing the Kinova robotic arm as a physical platform
+}
+\subsection{Connecting to the physical Kinova robotic arm}
+We have used the Kinova robotic arm in simulation in the previous lab. Today we will have the opportunity to familiarize ourselves with the actual physical robot. 
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=10cm]{images/kinova.PNG}\vspace{-10pt}
+    \caption{physical kinova arm.}\label{fig:gazebo}
+    \end{figure}
+
+
+\textbf{Instructions:}
+\begin{enumerate}
+    \item Open your browser and type your assigned robot’s IP address. This will open the Kinova Web App. The username is and the password are both "admin". 
+    \begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=12cm]{images/kinova1.PNG}\vspace{-10pt}
+    \caption{kinova web app.}\label{fig:kinova1}
+    \end{figure}
+    
+    \item In the Systems -> Monitoring you will see the current status of the robot’s joints: joint angle values, pose of the end effector with respect to the base, velocities and efforts for each joint.
+    \item In the bottom panel there are two buttons: Pose and Angular. Each one of these, changes the position of the robot arm in a different working space: "Pose" changes the position and orientation of the end effector (task space), while "Angular" changes each joint angle value (configuration space).
+    \begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=12cm]{images/kinova2.PNG}\vspace{-10pt}
+    \caption{kinova web app - work space.}\label{fig:kinova2}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=12cm]{images/kinova3.PNG}\vspace{-10pt}
+    \caption{kinova web app - configuration space (joint space).}\label{fig:kinova3}
+    \end{figure}
+\end{enumerate}
+\textbf{Note}: Please be mindful as you use the UI’s joysticks and keep speeds low and movements small, particularly when movements lead towards the table. Please pay close attention to the robot mootion and stop the motion using emergency stop if necessary. \\
+
+\textbf{Deliverables:}
+\begin{enumerate}
+    \item Use the Pose tab on the bottom panel to move the robot’s end effector towards the Grid quadrant x = 4, y = 6. Select a z pose value greater than 15cm. Close the gripper to 10\%. You will have two camera views (one “over-the-shoulder” one “top”). Answering the following three questions:
+    \begin{enumerate}
+    \item Report the pose of the end effector (Position and Orientation with respect to the base).
+    
+    \item What is the corresponding set of joint angles that match this pose? You can take a screenshot.
+
+    \item The grid on the table is 5cm x 5cm per square. Determine the transformation between the end-effector’s reference frame and the grid.
+    \end{enumerate}
+    
+    \item Take a photo of your robot reaching the required pose.
+    
+    \item Switch to "Angular" on the bottom panel to move the robot to the following joint angle sets of values and report the robot’s pose of the end effector from either the Pose tab or from the Monitoring overview by taking a screenshot. Also provide your best estimate of the location from the Grid quadrant.
+    
+     \begin{enumerate}
+    \item (17, 340, 134, 270, 338, 290) Gripper at 90\%
+    
+    
+    \item (357, 21, 150, 272, 320, 273) Gripper at 30\%
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsection{Spawning a Kinova robot arm using Kortex Driver}
+
+We will use the ros\_kortex repository to work with the Kinova arm. In this metapackage, we will use the kortex\_driver portion. Execute the following launch file that will bring up the gen3\_lite controllers, MoveIt! Configurations and an RViZ window.
+
+\begin{minted}{bash}
+        ~$ roslaunch kortex_driver kortex_driver.launch arm:=gen3_lite ip_address:=
+        <IP OF ROBOT>
+    \end{minted}
+
+\textbf{Note:} Once the RViZ window has been opened, and the terminal should show two green messages ( “You can start planning now!” and “The Kortex driver has been initialized correctly!” ). At this point, you can add a MotionPlanning component in RviZ.
+
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=10cm]{images/kinovaRviz.PNG}\vspace{-10pt}
+    \caption{kinova Rviz).}\label{fig:kinovarviz}
+    \end{figure}
+
+\subsection{Using the Interactive Markers to change the robot’s pose based on the cartesian-space}
+
+
+\textbf{Instructions:}
+
+\begin{enumerate}
+    \item You can use the different arrows and rings in the RViZ interactive marker, to change position and orientation of the robot’s end-effector. As you use them, you will see an orange version of the robot arm with the proposed new position. Once you have reached a desired position, use the buttons “Plan” and “Execute” to make the robot in Gazebo match the new proposed position. Some useful tools for you to track the robot’s motions are:
+    \begin{minted}{bash}
+        ~$ rostopic echo -n 1 /my_gen3_lite/joint_states
+    \end{minted}
+    which publishes the values of the joints.
+    
+    \begin{minted}{bash}
+        ~$ rosrun tf tf_echo /base_link <END-EFFECTOR LINK>
+    \end{minted}
+    
+    which outputs the pose of the robot’s end-effector with respect to the base of the robot. You may also come to realize that there are other links on the robot’s gripper that might report different values. You can use the following command to generate a PDF with the TF tree for the robot:
+     \begin{minted}{bash}
+        ~$ rosrun tf view_frames
+    \end{minted}
+    
+    \item If you want to change the state of the gripper, you need to change the Planning Group from arm to gripper, and you can select a new position.
+\end{enumerate}
+\textbf{Deliverables:}
+\begin{enumerate}
+    \item What are the reported robot’s joints values and end-effector pose (position and orientation w.r.t. the base, consider using both end\_effector\_link and tool\_frame links) when you send the arm to the following positions:
+    \begin{enumerate}
+        \item Home
+        \item Vertical
+        \item Grid quadrant x = 4, y = 6. Note: Keep the z-pose value greater than 15cm to avoid hitting the ground.
+    \end{enumerate}
+    
+    \item Compare the results reported by the Kinova Web App Monitoring against the reported values from tf\_echo and joint\_states for the 3 previous positions. Discuss any potential source for difference in the two sources. You can take screenshots to compare. 
+    
+\end{enumerate}
+
+
+\subsection{Using the Joints tab in MotionPlanning to change the robot’s pose on the configuration-space}
+
+
+\textbf{Instructions:}
+
+In the Motion Planning component, find the Joints tab. You will be able to change the values of the different joint angles. Explore the configuration space, determine which joints move in which direction when a positive or a negative angle is given to each joint.\\
+
+\textbf{Deliverables:}
+\begin{enumerate}
+    \item Use the same tools (tf\_echo, joint\_states, and the reported values in the Kinova Web App) described in the previous subsections to explore the values for the pose and the joint angles of the following sets:
+    \begin{enumerate}
+        \item (17, 340, 134, 270, 338, 290) Gripper at 90\%
+        \item (357, 21, 150, 272, 320, 273) Gripper at 30\%
+    \end{enumerate}
+    
+    \item Describe any differences between using the Joints tab in RViZ and the Angular tab in the Kinova Web App. For example, What are the benefits or challenges of using one over the other?
+
+\end{enumerate}
+
+
+\subsection{Pick up the cube}
+You can choose any methods you learned to finish the deliverables in this section.
+
+\textbf{Deliverables:}
+\begin{enumerate}
+    \item Take a video of the robot arm attempting to picking something(ideally a cube) up from your table. Aim the x-y location based on your Quadrant grid location x = 8, y = 3, z = (above the table constraint).(If x= 8, y = 3 is too far to get, then you can pick the point of your choice but you need to report which point you pick.) You can use your previously found transformation between the grid and the robot’s axes.
+    
+    \item Select (and report) a percentage for the relative position of the gripper. Additionally, report the end\_effector’s pose. 
+\end{enumerate}
+
+
+
+
+
+
+\section{Introducing Planning Scene Objects in MoveIt! (Only simulation)}
+
+
+
+\textbf{Instructions:}
+
+We will go through the steps of adding an object to our planning scene, which in turn will serve as a constraint when MotionPlanning is creating safe motions for the robot to reach different positions. Using the RViZ tab called Scene Objects, select a “Box” with dimensions 1m for all three axes (x, y, z).
+
+Change the position values to the ones on the picture below (x= 0.55, y = ±0.45, z = -0.48) to set the scene object a little above the table level in the physical world. 
+Tick the box next to Box\_0 name (you may rename it), to attach the object to the base\_link.
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=10cm]{images/motionPlanning.png}\vspace{10pt}
+    \caption{kinova Rviz}\label{fig:kinovarviz}
+    \end{figure}
+
+Finally, publish the changes made so the move\_group instance saves the changes to include in planning stages.\\
+
+\textbf{Deliverables:}
+
+Use the interactive markers to move the gripper towards the planned scene object. 
+    \begin{enumerate}
+        \item Describe what you see in terms of pieces of the robot changing colors.
+        \item Hit the plan button (not execute) and report on any changes in the terminal or the status in the Planning tab.
+    \end{enumerate}
+
+
+\section{Pick and Place task}
+
+Now that we have familiarized ourselves with the Kinova arm both in simulation and in the real world, we will expand our knowledge towards a common robotic arm task: pick and place.\\
+
+
+\textbf{Instructions:}
+For this portion of the assignment, we will return to the simulated Kinova Arm.
+
+    \begin{minted}{bash}
+       ~$ roslaunch kortex_gazebo spawn_kortex_robot.launch arm:=gen3_lite
+    \end{minted}
+
+In Gazebo, on the left panel’s “Insert” tab, find the “Wooden cube 7.5cm” object and add it to the world on a position on the ground within the robot arm’s workspace (space that can be reached by the arm).
+Add another planned scene object, to avoid hitting the ground with the robot’s end effector. You can follow the same instructions from RViZ.
+The pick and place task can be summarized in the following steps:
+\begin{enumerate}
+    \item Reach position above the center of the object to be picked with gripper oriented
+    \item Adjust gripper to open or semi-open state.
+    \item Decrease the end-effector’s z-value position
+    \item Close gripper to grasp object.
+    \item Reach position above the desired location to place the object with gripper oriented.
+    \item Decrease the end-effector’s z-value position
+    \item Open gripper to release object.
+    \item Increase the end-effector’s z-value position to clear the object
+    \item Return to home position.
+    
+\end{enumerate}
+
+The goal of this section is to get familiar with this pick and place sequence and complete it step by step. To avoid errors during the executions, you are suggested to configure the program by running
+\begin{minted}{bash}
+       $ rosrun rqt_reconfigure rqt_reconfigure
+    \end{minted}
+Set allowed\_execution\_duration\_scaling to be 4 and uncheck the execution\_duration\_monitoring.
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=13cm]{images/config.png}\vspace{-10pt}
+    \caption{Configuration}\label{fig:kinovarviz}
+    \end{figure}
+
+
+\textbf{Deliverables:}
+\begin{enumerate}
+    \item Attempt the pick and place steps through RViZ. Report values of interest used to complete the task:
+    \begin{enumerate}
+        \item Pose of the cube and desired placing location.
+        \item Selected height to approach object.
+        \item Percentage of the gripper’s open/close position.
+    \end{enumerate}
+    \item Record a video of the completed task.
+    \item Discuss some of the challenges you faced to complete the task
+\end{enumerate}
+
+\end{document}

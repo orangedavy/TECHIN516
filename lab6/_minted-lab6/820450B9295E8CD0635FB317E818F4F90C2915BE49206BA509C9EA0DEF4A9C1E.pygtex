@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{       }\PYGZti{}\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }kortex\PYGZus{}gazebo\PYG{+w}{ }spawn\PYGZus{}kortex\PYGZus{}robot.launch\PYG{+w}{ }arm:\PYG{o}{=}gen3\PYGZus{}lite
+\end{Verbatim}

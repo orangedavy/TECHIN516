@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }fetch\PYGZus{}gazebo\PYG{+w}{ }simulation.launch
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }fetch\PYGZus{}moveit\PYGZus{}config\PYG{+w}{ }move\PYGZus{}group.launch
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }rosrun\PYG{+w}{ }rviz\PYG{+w}{ }rviz
+\end{Verbatim}

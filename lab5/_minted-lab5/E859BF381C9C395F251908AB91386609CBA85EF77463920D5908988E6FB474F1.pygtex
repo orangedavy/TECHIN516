@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }python3\PYG{+w}{ }python3\PYGZhy{}pip
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }sudo\PYG{+w}{ }python3\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }pip\PYG{+w}{ }install\PYG{+w}{ }conan
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }conan\PYG{+w}{ }config\PYG{+w}{ }\PYG{n+nb}{set}\PYG{+w}{ }general.revisions\PYGZus{}enabled\PYG{o}{=}\PYG{l+m}{1}
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }conan\PYG{+w}{ }profile\PYG{+w}{ }new\PYG{+w}{ }default\PYG{+w}{ }\PYGZhy{}\PYGZhy{}detect\PYG{+w}{ }\PYGZgt{}\PYG{+w}{ }/dev/null
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }conan\PYG{+w}{ }profile\PYG{+w}{ }update\PYG{+w}{ }settings.compiler.libcxx\PYG{o}{=}libstdc++11\PYG{+w}{ }default
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }\PYG{n+nb}{cd}\PYG{+w}{ }catkin\PYGZus{}ws/src
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }git\PYG{+w}{ }clone\PYG{+w}{ }https://github.com/Kinovarobotics/ros\PYGZus{}kortex.git
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }\PYG{n+nb}{cd}\PYG{+w}{ }../
+\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }rosdep\PYG{+w}{ }install\PYG{+w}{ }\PYGZhy{}\PYGZhy{}from\PYGZhy{}paths\PYG{+w}{ }src\PYG{+w}{ }\PYGZhy{}\PYGZhy{}ignore\PYGZhy{}src\PYG{+w}{ }\PYGZhy{}y
+\end{Verbatim}

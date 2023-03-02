@@ -231,7 +231,7 @@ Open-loop refers to the robot’s operation created by the input signal does not
 
     \item Report the chosen strategy (published values) to complete the task of moving 1.5m forward in open-loop.
     
-    \textbf{Answer: }For the command to publish velocity, I chose to apply \mintinline{bash}{0.15} to the linear velocity of \mintinline{bash}{x}, and stopped right after the topic published for $3$ seconds, which made the expected distance to travel $1.5m$ ($0.15 \times 10.0$).
+    \textbf{Answer: }For the command to publish velocity, I chose to apply \mintinline{bash}{0.15} to the linear velocity of \mintinline{bash}{x}, and stopped right after the topic published for $10$ seconds, which made the expected distance to travel $1.5m$ ($0.15 \times 10.0$).
     
     \item Inspect the turtlebot3’s position in Gazebo. (World -> Models -> turtlebot3\_burger -> pose -> x). Did the robot move 1.5m accurately?
     
@@ -257,7 +257,7 @@ Open-loop refers to the robot’s operation created by the input signal does not
         Rotate(120)
         GoForward(0.5)
         WaitTime(3s)
-        Rotate(60)
+        Rotate(120)
         GoForward(0.5)
         WaitTime(3s)
     \end{verbatim}

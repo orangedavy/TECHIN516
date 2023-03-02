@@ -7,7 +7,9 @@
 \usepackage{fullpage}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{multicol}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -107,7 +109,7 @@ We have used the Kinova robotic arm in simulation in the previous lab. Today we 
     \caption{kinova web app - configuration space (joint space).}\label{fig:kinova3}
     \end{figure}
 \end{enumerate}
-\textbf{Note}: Please be mindful as you use the UI’s joysticks and keep speeds low and movements small, particularly when movements lead towards the table. Please pay close attention to the robot mootion and stop the motion using emergency stop if necessary. \\
+\textbf{Note}: Please be mindful as you use the UI’s joysticks and keep speeds low and movements small, particularly when movements lead towards the table. Please pay close attention to the robot motion and stop the motion using emergency stop if necessary. \\
 
 \textbf{Deliverables:}
 \begin{enumerate}
@@ -115,20 +117,141 @@ We have used the Kinova robotic arm in simulation in the previous lab. Today we 
     \begin{enumerate}
     \item Report the pose of the end effector (Position and Orientation with respect to the base).
     
-    \item What is the corresponding set of joint angles that match this pose? You can take a screenshot.
+    \begin{table}[H]
+        \caption{\mintinline{bash}{Pose} information of end effector}
+        \begin{subtable}{.5\linewidth}
+            \centering
+            \caption{\mintinline{bash}{Position} of end effector in custom state}
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Linear} & \textit{x} & \textit{y} & \textit{z} \\\midrule
+                \textbf{Position} & 20.2 & -30.3 & 54.9 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+        \begin{subtable}{.5\linewidth}
+            \centering
+            \caption{\mintinline{bash}{Orientation} of end effector}
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Angular} & \textit{$\theta$x} & \textit{$\theta$y} & \textit{$\theta$z} \\\midrule
+                \textbf{Orientation} & 85.5 & 1.0 & 15.9 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+    \end{table}
+
+    \item What is the corresponding set of joint angles that match this pose?
+    
+    \begin{table}[H]
+        \centering
+        \caption{Joint angles of end effector}
+        \begin{tabular}{ccccccc}
+        \toprule
+        \textbf{Joint} & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & \textit{6} \\ \midrule
+        \textbf{Angle} & 317        & 284        & 248        & 55         & 116        & 249        \\ \bottomrule
+        \end{tabular}
+    \end{table}
 
     \item The grid on the table is 5cm x 5cm per square. Determine the transformation between the end-effector’s reference frame and the grid.
+    
+    \textbf{Answer: }The origin of the arm w.r.t. the grid quadrant is \mintinline{bash}{(0, 12)}. Based on the information that the grid location \mintinline{bash}{(4, 6)} translates to pose \mintinline{bash}{(20, -30)}, and that the grid is \mintinline{bash}{5x5}, the formulae for transformation can be generalized as:
+    \begin{multicols}{2}
+        \noindent
+        \begin{equation}
+            x_{\text{pose}} = 5\times x_{\text{grid}}
+        \end{equation}
+        \begin{equation}
+            y_{\text{pose}} = 5\times y_{\text{grid}} - 60
+        \end{equation}
+    \end{multicols}
+
     \end{enumerate}
     
     \item Take a photo of your robot reaching the required pose.
     
+    \begin{figure}[h]
+        \centering
+        \subfloat[Front view]{\includegraphics[height=5cm]{images/custom.jpeg}}
+        \hspace{20pt}
+        \subfloat[Bird view]{\includegraphics[height=5cm]{images/custom_1.jpeg}}
+        \caption{Setting arm to reach custom goal state.}
+        \label{fig:custom_arm}\vspace{-10pt}
+    \end{figure}
+    
     \item Switch to "Angular" on the bottom panel to move the robot to the following joint angle sets of values and report the robot’s pose of the end effector from either the Pose tab or from the Monitoring overview by taking a screenshot. Also provide your best estimate of the location from the Grid quadrant.
     
-     \begin{enumerate}
+    \begin{enumerate}
+
     \item (17, 340, 134, 270, 338, 290) Gripper at 90\%
     
+    \begin{table}[H]
+        \caption{\mintinline{bash}{Pose} information of end effector in custom state with grid estimate}
+        \begin{subtable}{.3\linewidth}
+            \centering
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Linear} & \textit{x} & \textit{y} & \textit{z} \\\midrule
+                \textbf{Position} & 0.2 & 0.0 & 0.0 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+        \hfill
+        \begin{subtable}{.4\linewidth}
+            \centering
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Angular} & \textit{$\theta$x} & \textit{$\theta$y} & \textit{$\theta$z} \\\midrule
+                \textbf{Orientation} & 3.3 & 178.9 & 87.3 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+        \hfill
+        \begin{subtable}{.25\linewidth}
+            \centering
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Linear} & \textit{x} & \textit{y} \\\midrule
+                \textbf{Grid} & 0.04 & 12.00 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+    \end{table}
     
     \item (357, 21, 150, 272, 320, 273) Gripper at 30\%
+    
+    \begin{table}[H]
+        \caption{\mintinline{bash}{Pose} information of end effector in retract state with grid estimate}
+        \begin{subtable}{.3\linewidth}
+            \centering
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Linear} & \textit{x} & \textit{y} & \textit{z} \\\midrule
+                \textbf{Position} & 0.1 & -0.1 & 0.1 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+        \begin{subtable}{.4\linewidth}
+            \centering
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Angular} & \textit{$\theta$x} & \textit{$\theta$y} & \textit{$\theta$z} \\\midrule
+                \textbf{Orientation} & 10.8 & 177.9 & 82.8 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+        \begin{subtable}{.25\linewidth}
+            \centering
+            \begin{tabular}{cccc}
+                \toprule
+                \textbf{Linear} & \textit{x} & \textit{y} \\\midrule
+                \textbf{Grid} & 0.02 & 12.02 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+    \end{table}
+
+    \begin{figure}[h]
+        \centering
+        \subfloat[Custom state]{\includegraphics[width=0.48\linewidth]{images/custom_web.png}}
+        \hfill
+        \subfloat[Retract state]{\includegraphics[width=0.48\linewidth]{images/retract_web.png}}
+        \caption{Monitoring \mintinline{bash}{Pose} of end effector.}
+        \label{fig:custom_arm}\vspace{-10pt}
+    \end{figure}
+
     \end{enumerate}
 \end{enumerate}
 
@@ -181,9 +304,125 @@ We will use the ros\_kortex repository to work with the Kinova arm. In this meta
     \item What are the reported robot’s joints values and end-effector pose (position and orientation w.r.t. the base, consider using both end\_effector\_link and tool\_frame links) when you send the arm to the following positions:
     \begin{enumerate}
         \item Home
+        
+        \begin{table}[H]
+            \caption{Pose information of end effector in home state}
+            \begin{subtable}{.4\linewidth}
+                \centering
+                \caption{Position}
+                \begin{tabular}{cccc}
+                    \toprule
+                    Source & \textit{x} & \textit{y} & \textit{z} \\\midrule
+                    end\_effector\_link & 0.37 & 0.08 & 0.45 \\
+                    tool\_frame\_link & 0.44 & 0.19 & 0.45 \\
+                    Kinova Web App & 0.44 & 0.19 & 0.45 \\\bottomrule
+                \end{tabular}
+            \end{subtable}
+            \hfill
+            \begin{subtable}{.52\linewidth}
+                \centering
+                \caption{Orientation}
+                \begin{tabular}{ccccc}
+                    \toprule
+                    Source & \textit{x} & \textit{y} & \textit{z} & \textit{w} \\\midrule
+                    end\_effector\_link & -0.35 & 0.62 & 0.36 & 0.61 \\
+                    tool\_frame\_link & 0.19 & 0.69 & 0.68 & 0.18 \\\bottomrule
+                \end{tabular}
+            \end{subtable}
+        \end{table}
+        \vspace{-10pt}
+        \begin{table}[H]
+            \centering
+            \caption{Joint angles of end effector in home state}
+            \begin{tabular}{ccccccc}
+            \toprule
+            Source & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & \textit{6} \\\midrule
+            joint\_states & & & & & & \\
+            RViZ & 0 & -16 & 75 & 0 & -60 & 0 \\
+            Kinova Web App & 360 & 344 & 75 & 360 & 300 & 0 \\\bottomrule
+            \end{tabular}
+        \end{table}
+
         \item Vertical
+        
+        \begin{table}[H]
+            \caption{Pose information of end effector in vertical state}
+            \begin{subtable}{.4\linewidth}
+                \centering
+                \caption{Position}
+                \begin{tabular}{cccc}
+                    \toprule
+                    Source & \textit{x} & \textit{y} & \textit{z} \\\midrule
+                    end\_effector\_link & 0.06 & -0.01 & 0.87 \\
+                    tool\_frame\_link & 0.06 & -0.01 & 1.00 \\
+                    Kinova Web App & 0.06 & -0.01 & 1.00 \\\bottomrule
+                \end{tabular}
+            \end{subtable}
+            \hfill
+            \begin{subtable}{.52\linewidth}
+                \centering
+                \caption{Orientation}
+                \begin{tabular}{ccccc}
+                    \toprule
+                    Source & \textit{x} & \textit{y} & \textit{z} & \textit{w} \\\midrule
+                    end\_effector\_link & 0.00 & -0.01 & 0.36 & 0.61 \\
+                    tool\_frame\_link & 0.19 & 0.69 & 0.68 & 0.18 \\\bottomrule
+                \end{tabular}
+            \end{subtable}
+        \end{table}
+        \vspace{-10pt}
+        \begin{table}[H]
+            \centering
+            \caption{Joint angles of end effector in vertical state}
+            \begin{tabular}{ccccccc}
+            \toprule
+            Source & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & \textit{6} \\\midrule
+            joint\_states & & & & & & \\
+            RViZ & 0 & 0 & 0 & 0 & 0 & 0 \\
+            Kinova Web App & 360 & 360 & 360 & 360 & 0 & 0 \\\bottomrule
+            \end{tabular}
+        \end{table}
+
         \item Grid quadrant x = 4, y = 6. Note: Keep the z-pose value greater than 15cm to avoid hitting the ground.
     \end{enumerate}
+
+    \begin{table}[H]
+        \caption{Pose information of end effector in custom state}
+        \begin{subtable}{.4\linewidth}
+            \centering
+            \caption{Position}
+            \begin{tabular}{cccc}
+                \toprule
+                Source & \textit{x} & \textit{y} & \textit{z} \\\midrule
+                end\_effector\_link & 0.06 & -0.01 & 0.87 \\
+                tool\_frame\_link & 0.06 & -0.01 & 1.00 \\
+                Kinova Web App & 0.06 & -0.01 & 1.00 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+        \hfill
+        \begin{subtable}{.52\linewidth}
+            \centering
+            \caption{Orientation}
+            \begin{tabular}{ccccc}
+                \toprule
+                Source & \textit{x} & \textit{y} & \textit{z} & \textit{w} \\\midrule
+                end\_effector\_link & 0.00 & -0.01 & 0.36 & 0.61 \\
+                tool\_frame\_link & 0.19 & 0.69 & 0.68 & 0.18 \\\bottomrule
+            \end{tabular}
+        \end{subtable}
+    \end{table}
+    \vspace{-10pt}
+    \begin{table}[H]
+        \centering
+        \caption{Joint angles of end effector in custom state}
+        \begin{tabular}{ccccccc}
+        \toprule
+        Source & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & \textit{6} \\\midrule
+        joint\_states & & & & & & \\
+        RViZ & 146 & 7 & -1 & 1 & 6 & -147 \\
+        Kinova Web App & 317 & 284 & 248 & 55 & 116 & 249 \\\bottomrule
+        \end{tabular}
+    \end{table}
     
     \item Compare the results reported by the Kinova Web App Monitoring against the reported values from tf\_echo and joint\_states for the 3 previous positions. Discuss any potential source for difference in the two sources. You can take screenshots to compare. 
     

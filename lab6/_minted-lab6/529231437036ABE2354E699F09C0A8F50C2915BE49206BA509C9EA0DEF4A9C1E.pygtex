@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{+w}{        }\PYGZti{}\PYGZdl{}\PYG{+w}{ }roslaunch\PYG{+w}{ }kortex\PYGZus{}driver\PYG{+w}{ }kortex\PYGZus{}driver.launch\PYG{+w}{ }arm:\PYG{o}{=}gen3\PYGZus{}lite\PYG{+w}{ }ip\PYGZus{}address:\PYG{o}{=}
-\PYG{+w}{        }\PYGZlt{}IP\PYG{+w}{ }OF\PYG{+w}{ }ROBOT\PYGZgt{}
-\end{Verbatim}

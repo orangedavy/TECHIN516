@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYGZti{}\PYGZdl{} roslaunch kortex\PYGZus{}driver kortex\PYGZus{}driver.launch arm:\PYG{o}{=}gen3\PYGZus{}lite ip\PYGZus{}address:\PYG{o}{=}
+        \PYGZlt{}IP OF ROBOT\PYGZgt{}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZdl{} roslaunch kortex\PYGZus{}gazebo spawn\PYGZus{}kortex\PYGZus{}robot.launch arm:\PYG{o}{=}
+    gen3 gripper:\PYG{o}{=}robotiq\PYGZus{}2f\PYGZus{}85
+\end{Verbatim}

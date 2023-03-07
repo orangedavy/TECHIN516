@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZdl{} \PYG{n+nb}{cd} catkin\PYGZus{}ws/src
+    \PYGZdl{} git clone \PYGZhy{}b ros1 https://github.com/fetchrobotics/fetch\PYGZus{}ros.git
+    \PYGZdl{} git clone \PYGZhy{}b gazebo11 https://github.com/fetchrobotics/fetch\PYGZus{}gazebo.git
+    \PYGZdl{} git clone \PYGZhy{}b ros1 https://github.com/fetchrobotics/fetch\PYGZus{}msgs.git
+    \PYGZdl{} git clone \PYGZhy{}b ros1 https://github.com/fetchrobotics/power\PYGZus{}msgs.git
+    \PYGZdl{} git clone \PYGZhy{}b ros1 https://github.com/fetchrobotics/robot\PYGZus{}controllers.git
+    \PYGZdl{} \PYG{n+nb}{cd} ../
+    \PYGZdl{} rosdep install \PYGZhy{}\PYGZhy{}from\PYGZhy{}paths src \PYGZhy{}\PYGZhy{}ignore\PYGZhy{}src \PYGZhy{}y
+    \PYG{o}{(}Ignore the error: Unable to locate package ros\PYGZhy{}noetic\PYGZhy{}simple\PYGZhy{}grasping\PYG{o}{)}
+    \PYGZdl{} sudo apt install ros\PYGZhy{}noetic\PYGZhy{}rgbd\PYGZhy{}launch
+\end{Verbatim}

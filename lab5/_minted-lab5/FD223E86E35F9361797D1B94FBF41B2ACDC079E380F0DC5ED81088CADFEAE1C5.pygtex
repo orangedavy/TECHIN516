@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYGZlt{}BASE LINK\PYGZgt{} \PYG{o}{=} base\PYGZus{}link
+        \PYGZlt{}FIRST ARM JOINT\PYGZgt{} \PYG{o}{=} shoulder\PYGZus{}pan\PYGZus{}link
+        \PYGZlt{}END\PYGZhy{}EFFECTOR LINK\PYGZgt{} \PYG{o}{=} wrist\PYGZus{}roll\PYGZus{}link
+\end{Verbatim}

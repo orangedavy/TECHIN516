@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZdl{} \PYG{n+nb}{export} \PYG{n+nv}{GAZEBO\PYGZus{}MODEL\PYGZus{}PATH}\PYG{o}{=}\PYG{n+nv}{\PYGZdl{}GAZEBO\PYGZus{}MODEL\PYGZus{}PATH}:\PYGZlt{}path to your Lab7\PYGZus{}code folder\PYGZgt{}
+\PYGZdl{} roslaunch kortex\PYGZus{}gazebo spawn\PYGZus{}kortex\PYGZus{}robot.launch arm:\PYG{o}{=}gen3 gripper:
+\PYG{o}{=}robotiq\PYGZus{}2f\PYGZus{}85 z0:\PYG{o}{=}\PYG{l+m}{0}.775
+\end{Verbatim}

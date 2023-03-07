@@ -1,0 +1,247 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{scribe}
+\usepackage{listings}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\usepackage{xurl}
+\usepackage[svgnames]{xcolor}
+\usepackage{color}
+% \definecolor{light-gray}{gray}{0.90}
+% \lstset{backgroundcolor=\color{light-gray},showlines=true}
+
+% \usepackage{xcolor}
+% \usepackage{listings}
+
+% \lstdefinestyle{BashInputStyle}{
+%   language=bash,
+%   basicstyle=\small\sffamily,
+%   numbers=left,
+%   numberstyle=\tiny,
+%   numbersep=3pt,
+%   frame=tb,
+%   columns=fullflexible,
+%   backgroundcolor=\color{yellow!20},
+%   linewidth=0.9\linewidth,
+%   xleftmargin=0.1\linewidth
+% }
+
+
+\usepackage{minted}
+\setminted{fontsize=\footnotesize,baselinestretch=0.5}
+
+
+
+\Scribe{}
+\Lecturer{Queenie Qiu, John Raiti. Student: Fill your name}
+\LectureNumber{7}
+\LectureDate{DATE: March 2nd. 2023}
+\LectureTitle{Pick and Place tasks and Arm Motion Planning}
+
+\lstset{style=mystyle}
+
+\begin{document}
+	\MakeScribeTop
+
+%#############################################################
+%#############################################################
+%#############################################################
+%#############################################################
+
+\section{Learning Objectives}
+\begin{enumerate}
+    \item Learn about waypoint generation in robotic arm trajectories and motion planning.
+    
+    \item Implement code to perform pick and place tasks in a recycle-sorting scenario.
+    
+\end{enumerate}
+
+
+\section{Creating a robotic arm trajectory from waypoints}
+\subsection{Trajectory planning with Bezier curve in Cartesian space for Kinova arm}
+\textbf{Instruction:}
+There are many trajectory planning strategies among which Bezier curve is one that is easy to apply and ideal for applications requiring a smooth trajectory. A Bezier curve is a mathematical curve defined by a series of control points, which determine the shape of the curve. The curve starts at the first control point and ends at the last control point, but it can bend and twist in any way that is defined by the other control points.
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=12cm]{images/bezier.png}\vspace{-10pt}
+    \caption{Cubic Bezier curve with four control points}\label{fig:curves}
+    \end{figure}
+
+During this session, we will guide the Kinova arm to follow a trajectory based on a Bezier curve, moving it from the Home position to the Vertical position. First, we will acquaint ourselves with the lab materials, starting with an Excel file employed to generate a trajectory using Bezier curves. 
+
+\url{https://uwnetid-my.sharepoint.com/:x:/g/personal/mecu_uw_edu/ETBpJ3Zvj1BNi2nTQRjYhxgBhsA50Y1KB6yDVAq8hl8sTQ?e=CROl1g}
+
+This Excel file calculates interpolate points along the Bezier curve based on 4 input control points, with two possible output versions containing 11 or 21 points.
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=10cm]{images/lab71.png}\vspace{-10pt}
+    \caption{Bezier curve.}\label{fig:curves}
+    \end{figure}
+
+Then spawn a robot in an empty world:
+
+\begin{minted}{bash}
+    $ roslaunch kortex_gazebo spawn_kortex_robot.launch arm:=
+    gen3 gripper:=robotiq_2f_85
+    \end{minted}
+
+We will use RViZ to select 4 points to generate a trajectory: Start, End, and 2 mid points. Use Home position as Start and Vertical as End. You need to find two intermediate poses (collect pose information from \$ rosrun tf tf\_echo base\_link tool\_frame). 
+The trajectories generated on the file are normalized in time ($0 \leqslant t \leqslant 1$). 
+
+Select the version of your choice (11 or 21 points) and paste that information into you data.csv file. Once the data.csv file has been modified you can run the python script(plot\_trajectory.py) to plot the points in 3D for visualization.
+
+\textbf{Tip:} : you should replace (Ctrl + H) the tab spacing with a comma (,)
+
+
+So far, we have handled the position of the end-effector’s pose along the trajectory with the Bezier curve. Next, we will need to generate
+smooth changes between the orientations that differ at positions.
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=12cm]{images/lab72.png}\vspace{-10pt}
+    \caption{quaternions}\label{fig:curves}
+    \end{figure}
+
+
+For quaternion interpolation we will use one class of the python module pyquaternion. You can install it using pip:
+\begin{minted}{bash}
+    $ pip install pyquaternion
+    \end{minted}
+
+
+The typical usage of pyquaternion that best suits our application is by declaring one quaternion for each start and end pose, and use one method that uniformly interpolates values in between:
+    \begin{minted}{bash}
+>> from pyquaternion import Quaternion
+
+>> qStart = Quaternion(w=<value>, x=<value>, y=<value>, z=<value>)
+
+>> qEnd = Quaternion(w=<value>, x=<value>, y=<value>, z=<value>)
+
+>> qList = Quaternion.intermediates(qStart, qEnd, <numIntermediates>
+, include_endpoints=True)
+
+\end{minted}
+
+This chunk of the code is in trajectory\_from\_csv.py. This file combines the two composition of trajectory generation - positions along the path and quaternion interpolation. You can run the script and visualize the changes in both RViZ and Gazebo.
+
+
+\textbf{Tip}: Execute the command 
+   \$ export ROS\_NAMESPACE="/my\_gen3/"
+on your terminal to be able to use pick\_and\_place.py class from terminal or import in different python file.\\
+
+\textbf{Deliverables:}
+\begin{enumerate}
+    \item Submit the selected control points used to generate a (Bezier curve) trajectory to go from Home to Vertical position
+    
+    \item Compare the path you created versus the path generated by Motion Planning in RViz starting from Home to Vertical. Please provide explanation when needed.
+    
+    \item Discuss the importance of complementing the trajectory generation process with the quaternion interpolation.
+    
+    \item Take a screenshot or save an image from your visualized trajectory from the plot\_trajectory script.
+    
+    \item If you have any modifications to the script that would result in a better visualization experience, propose them here and take a second screenshot.
+\end{enumerate}
+    
+%     \item (Extra credit) Generate trajectory points with the quintil polynomial formula using the provided class:
+    
+%     Example usage of quintic polynomial class:
+%     \begin{minted}{bash}
+% >> from quintic_poly_class import quintic_polynomial
+% >> lat_qp = quintic_polynomial(xStart, vStart, aStart, xEnd, vEnd, aEnd, Ti)
+% >> for t in np.arange(0.0, Ti, deltaT)]
+% >>	q = q.append(lat_qp.calc_point(t))
+% >>	q_d = q_d.append(lat_qp.calc_first_derivative(t))
+% \end{minted}
+%     \end{enumerate}
+
+\section{Pick and Place task with obstacle avoidance}
+
+\textbf{Instructions:}
+We have now become acquainted with all the aspects related to the arm's kinematics, trajectory planning, and the use of joint angles (configuration space) or end-effector poses (task space) to direct the robot's movements. In this section, we will apply all of these elements to a sorting task, which involves picking up cubes of different colors and placing them on top of the corresponding bins. It should be noted that the simulated environment includes walls that require careful planning to avoid collisions.
+
+\begin{figure}[H]
+    \vspace{-10pt}
+    \centering\includegraphics[width=12cm]{images/lab73.png}\vspace{-10pt}
+    \caption{The planning scene}\label{fig:planning}
+    \end{figure}
+
+
+In the start\_gazebo.launch file (roscd kortex\_gazebo/launch) add the following argument to open the new generated world:
+
+\begin{minted}{bash}
+<arg name="world_name" value="<path to your Lab7_code folder>/sorting_world.sdf"/>
+\end{minted}
+
+Additionally, in the spawn\_kortex\_robot.launch file, modify the line that starts the RViZ node to include the configuration file provided in the lab materials:
+
+\begin{minted}{bash}
+<node name="rviz" pkg="rviz" type="rviz" args="-d 
+<path to your Lab7_code folder>/pickandplace.rviz" if="$(arg start_rviz)"/>
+\end{minted}
+
+Once you have completed those changes, run the following command:
+
+\begin{minted}{bash}
+$ export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<path to your Lab7_code folder>
+$ roslaunch kortex_gazebo spawn_kortex_robot.launch arm:=gen3 gripper:
+=robotiq_2f_85 z0:=0.775
+\end{minted}
+
+Drawing on your prior knowledge of trajectory planning from the previous section, as well as your experience from the previous lab assignment, think about how the sorting task can be broken down into smaller sub-tasks, such as sorting the green cube and sorting the red cube. Additionally, the process for sorting the green cube can involve the same steps as the pick-and-place task from lab 6. To refresh your memory, the pick-and-place task involves the following steps:
+
+\begin{enumerate}
+    \item Reach position above the center of the object to be picked with gripper oriented
+    \item Adjust gripper to open or semi-open state.
+    \item Decrease the end-effector’s z-value position
+    \item Close gripper to grasp object.
+    \item Reach position above the desired location to place the object with gripper oriented.
+    \item Decrease the end-effector’s z-value position
+    \item Open gripper to release object.
+    \item Increase the end-effector’s z-value position to clear the object
+    \item Return to home position.
+    
+\end{enumerate}
+
+However, for sorting the cubes, you should consider finding waypoints that won't hit the walls, and generating trajectories that guarantee a successful movement between picking and placing.
+
+
+We have only started covering the many functionalities of MoveIt! You can use the following \hyperlink{http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html}{link} to go through their documentation.
+There are very valuable resources in \hyperlink{https://www.mathworks.com/videos/trajectory-planning-for-robot-manipulators-1556705635398.html}{Mathworks}. Those resources are part of a commercial product, but it is worth looking into them.
+If you require additional information about the pyquaternion module, visit their \hyperlink{http://kieranwynn.github.io/pyquaternion/}{documentation}.\\
+
+\textbf{Deliverables:}
+
+\begin{enumerate}
+    \item Provide a walkthrough of your process to complete the sorting task:
+    \begin{enumerate}
+        \item What sub-tasks did you select to divide the sorting task into? What did each sub-task entail?	Discuss the steps within each of your sub-tasks
+        
+        \item Mention some of the challenges and how you addressed them.
+    \end{enumerate}
+    \item Report values of interest used to complete the task:
+    \begin{enumerate}
+        \item Poses of the cubes, the bins, the selected waypoints, and desired placing location.
+        \item Selected height to approach object and place locations.
+        \item Percentage of the gripper’s open/close position.
+        
+    \end{enumerate}
+    
+    \item Record a video of the entire sorting task or select a specific portion of the task of the robot carrying out the necessary movements. You can choose to control the Kinova arms using Rviz or by writing code. If you opt for the latter, you can refer to the "pick\_and\_place.py" file for guidance.
+\end{enumerate}
+
+\end{document}

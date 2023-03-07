@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZdl{} catkin\PYGZus{}make
+    \PYGZdl{} \PYG{n+nb}{source} devel/setup.bash
+\end{Verbatim}

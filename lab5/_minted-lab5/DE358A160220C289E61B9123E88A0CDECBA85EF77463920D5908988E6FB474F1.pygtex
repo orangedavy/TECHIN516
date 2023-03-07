@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{+w}{    }\PYGZdl{}\PYG{+w}{ }rosrun\PYG{+w}{ }tf\PYG{+w}{ }tf\PYGZus{}echo\PYG{+w}{ }/odom\PYG{+w}{ }\PYGZlt{}END\PYGZhy{}EFFECTOR\PYG{+w}{ }LINK\PYGZgt{}
-\end{Verbatim}

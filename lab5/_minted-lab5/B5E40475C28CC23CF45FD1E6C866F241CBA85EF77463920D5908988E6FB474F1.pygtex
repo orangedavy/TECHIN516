@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{+w}{        }\PYGZdl{}\PYG{+w}{ }rostopic\PYG{+w}{ }\PYG{n+nb}{echo}\PYG{+w}{ }\PYGZhy{}n\PYG{+w}{ }\PYG{l+m}{1}\PYG{+w}{ }/my\PYGZus{}gen3\PYGZus{}lite/joint\PYGZus{}states
-\end{Verbatim}

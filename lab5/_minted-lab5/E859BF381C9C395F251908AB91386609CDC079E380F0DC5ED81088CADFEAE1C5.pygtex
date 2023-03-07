@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZdl{} sudo apt install python3 python3\PYGZhy{}pip
+    \PYGZdl{} sudo python3 \PYGZhy{}m pip install conan
+    \PYGZdl{} conan config \PYG{n+nb}{set} general.revisions\PYGZus{}enabled\PYG{o}{=}\PYG{l+m}{1}
+    \PYGZdl{} conan profile new default \PYGZhy{}\PYGZhy{}detect \PYGZgt{} /dev/null
+    \PYGZdl{} conan profile update settings.compiler.libcxx\PYG{o}{=}libstdc++11 default
+    \PYGZdl{} \PYG{n+nb}{cd} catkin\PYGZus{}ws/src
+    \PYGZdl{} git clone https://github.com/Kinovarobotics/ros\PYGZus{}kortex.git
+    \PYGZdl{} \PYG{n+nb}{cd} ../
+    \PYGZdl{} rosdep install \PYGZhy{}\PYGZhy{}from\PYGZhy{}paths src \PYGZhy{}\PYGZhy{}ignore\PYGZhy{}src \PYGZhy{}y
+\end{Verbatim}

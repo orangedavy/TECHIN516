@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZlt{}node \PYG{n+nv}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}rviz\PYGZdq{}} \PYG{n+nv}{pkg}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}rviz\PYGZdq{}} \PYG{n+nv}{type}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}rviz\PYGZdq{}} \PYG{n+nv}{args}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}d}
+\PYG{l+s+s2}{\PYGZlt{}path to your Lab7\PYGZus{}code folder\PYGZgt{}/pickandplace.rviz\PYGZdq{}} \PYG{k}{if}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{k}{\PYGZdl{}(}arg start\PYGZus{}rviz\PYG{k}{)}\PYG{l+s+s2}{\PYGZdq{}}/\PYGZgt{}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZdl{} roslaunch fetch\PYGZus{}gazebo simulation.launch
+    \PYGZdl{} roslaunch fetch\PYGZus{}moveit\PYGZus{}config move\PYGZus{}group.launch
+    \PYGZdl{} rosrun rviz rviz
+\end{Verbatim}

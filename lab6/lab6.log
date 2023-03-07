@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.3.1)  5 MAR 2023 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.3.1)  6 MAR 2023 11:01
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -755,42 +755,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 457--458
  []
 
 
-Overfull \hbox (8.10811pt too wide) in paragraph at lines 470--477
+Overfull \hbox (8.10811pt too wide) in paragraph at lines 473--480
  [][] 
  []
 
 
-Overfull \hbox (0.71648pt too wide) in paragraph at lines 482--488
+Overfull \hbox (0.71648pt too wide) in paragraph at lines 485--491
  [][] 
  []
 
 [8]
-Overfull \hbox (12.10406pt too wide) in paragraph at lines 510--517
+Overfull \hbox (12.10406pt too wide) in paragraph at lines 513--520
  [][] 
  []
 
 
-Overfull \hbox (0.71648pt too wide) in paragraph at lines 522--528
+Overfull \hbox (0.71648pt too wide) in paragraph at lines 525--531
  [][] 
  []
 
 [9]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 612.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 615.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 <images/motionPlanning.png, id=158, 245.41687pt x 168.63pt>
 File: images/motionPlanning.png Graphic file (type png)
 <use images/motionPlanning.png>
-Package pdftex.def Info: images/motionPlanning.png  used on input line 616.
+Package pdftex.def Info: images/motionPlanning.png  used on input line 619.
 (pdftex.def)             Requested size: 284.52756pt x 195.51057pt.
  [10]
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
 
  []
 
@@ -803,15 +803,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 641--642
 <images/config.png, id=175, 914.41624pt x 440.64626pt>
 File: images/config.png Graphic file (type png)
 <use images/config.png>
-Package pdftex.def Info: images/config.png  used on input line 673.
+Package pdftex.def Info: images/config.png  used on input line 676.
 (pdftex.def)             Requested size: 369.88582pt x 178.23886pt.
  [12 <./images/config.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 718.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 715.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 718.
  (./lab6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 715.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 715.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 718.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 718.
 Package rerunfilecheck Info: File `lab6.out' has not changed.
 (rerunfilecheck)             Checksum: C2569EEFD9A0F1AAF776E1FFEE01DC30;837.
 
@@ -820,7 +820,7 @@ LaTeX Warning: There were multiply-defined labels.
 
 runsystem(rm lab6.pyg)...executed.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 715.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 718.
  ) 
 Here is how much of TeX's memory you used:
  14077 strings out of 481239
@@ -831,7 +831,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  48i,11n,49p,1028b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on lab6.pdf (13 pages, 4471784 bytes).
+Output written on lab6.pdf (13 pages, 4471790 bytes).
 PDF statistics:
  261 PDF objects out of 1000 (max. 8388607)
  214 compressed objects within 3 object streams

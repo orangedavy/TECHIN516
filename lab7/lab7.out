@@ -1,0 +1,4 @@
+\BOOKMARK [1][-]{section.1}{Learning Objectives}{}% 1
+\BOOKMARK [1][-]{section.2}{Creating a robotic arm trajectory from waypoints}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Trajectory planning with Bezier curve in Cartesian space for Kinova arm}{section.2}% 3
+\BOOKMARK [1][-]{section.3}{Pick and Place task with obstacle avoidance}{}% 4

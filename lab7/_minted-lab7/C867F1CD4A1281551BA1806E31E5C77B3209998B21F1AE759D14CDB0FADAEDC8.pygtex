@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kn}{from} \PYG{n+nn}{pyquaternion} \PYG{k}{import} \PYG{n}{Quaternion}
+    \PYG{n}{qStart} \PYG{o}{=} \PYG{n}{Quaternion}\PYG{p}{(}\PYG{n}{w}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{x}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{y}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{z}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{)}
+    \PYG{n}{qEnd} \PYG{o}{=} \PYG{n}{Quaternion}\PYG{p}{(}\PYG{n}{w}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{x}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{y}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{z}\PYG{o}{=\PYGZlt{}}\PYG{n}{value}\PYG{o}{\PYGZgt{}}\PYG{p}{)}
+    \PYG{n}{qList} \PYG{o}{=} \PYG{n}{Quaternion}\PYG{o}{.}\PYG{n}{intermediates}\PYG{p}{(}\PYG{n}{qStart}\PYG{p}{,} \PYG{n}{qEnd}\PYG{p}{,} \PYG{o}{\PYGZlt{}}\PYG{n}{numIntermediates}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+                \PYG{n}{include\PYGZus{}endpoints}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\end{Verbatim}

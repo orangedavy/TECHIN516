@@ -330,7 +330,7 @@
         </link>
       </model>
       <model name='cube_red_clone'>
-        <pose frame=''>0.526025 0.117655 0.773995 0 -0 0</pose>
+        <pose frame=''>0.526 0.126 0.774 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose frame=''>0.526025 0.117655 0.811495 0 -0 0</pose>

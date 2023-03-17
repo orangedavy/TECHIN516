@@ -260,6 +260,8 @@ def main():
 
     cartesian_plan, fraction = example.plan_cartesian_path(waypoints)
 
+    print(f"waypoints: {waypoints}")
+
     example.display_trajectory(cartesian_plan)
 
     example.execute_plan(cartesian_plan)
@@ -267,8 +269,9 @@ def main():
     rospy.loginfo("Reaching Pose above object")
 
     # Joint configuration found from RViz IN RADIANS
-    joint_pose_above_object = [0.11300247073566894, 0.46736294296790515, 3.2563878439682945, -2.043034656899085, -0.1320834012328449, -0.6684807966395931, 1.8198839881152047]
-    
+    # joint_pose_above_object = [0.11300247073566894, 0.46736294296790515, 3.2563878439682945, -2.043034656899085, -0.1320834012328449, -0.6684807966395931, 1.8198839881152047]
+    joint_pose_above_object = [2.3889063571342053, -0.9833008893768316, 4.204017974177428, 1.4674421078027464, -0.9055181573791353, 1.1948492765832635, 2.061442257346817]
+
     success &= example.reach_joint_angles(config_pose = joint_pose_above_object,tolerance=0.01) #rad
 
     rospy.loginfo("Making sure gripper is open")
@@ -278,9 +281,10 @@ def main():
     rospy.loginfo("Lowering in z-axis")
     
     actual_pose = example.get_cartesian_pose()
+    print(f"starting position: {actual_pose}")
     actual_pose.position.z -= 0.06
     success &= example.reach_cartesian_pose(pose=actual_pose, tolerance=0.01, constraints=None)
-     
+    print(f"starting position: {actual_pose}")
     rospy.loginfo("Closing the gripper 30%...")
     
     success &= example.reach_gripper_position(0.3)
@@ -291,24 +295,24 @@ def main():
     actual_pose.position.z += 0.15
     success &= example.reach_cartesian_pose(pose=actual_pose, tolerance=0.01, constraints=None)
      
-    rospy.loginfo("Reaching Pose above green bin")
+    # rospy.loginfo("Reaching Pose above green bin")
 
-    # Joint configuration found from RViz
-    joint_pose_above_green_bin = [-0.8705235572878225, 0.7132756691134601, 3.154655446693461, -1.0576463485761654, -0.4489708882993586, -0.9799159153742165, 2.4297948935169877]
+    # # Joint configuration found from RViz
+    # joint_pose_above_green_bin = [-0.8705235572878225, 0.7132756691134601, 3.154655446693461, -1.0576463485761654, -0.4489708882993586, -0.9799159153742165, 2.4297948935169877]
     
-    success &= example.reach_joint_angles(config_pose = joint_pose_above_green_bin,tolerance=0.01) #rad
+    # success &= example.reach_joint_angles(config_pose = joint_pose_above_green_bin,tolerance=0.01) #rad
     
-    rospy.loginfo("Intermediate pose between bins")
+    # rospy.loginfo("Intermediate pose between bins")
     
-    actual_pose = example.get_cartesian_pose()
-    actual_pose.position.x = -0.171
-    actual_pose.position.y = 0.417
-    actual_pose.position.z = 0.846
-    actual_pose.orientation.x = -0.091
-    actual_pose.orientation.y = 0.763
-    actual_pose.orientation.z = 0.63 
-    actual_pose.orientation.w = 0.115
-    success &= example.reach_cartesian_pose(pose=actual_pose, tolerance=0.01, constraints=None)
+    # actual_pose = example.get_cartesian_pose()
+    # actual_pose.position.x = -0.171
+    # actual_pose.position.y = 0.417
+    # actual_pose.position.z = 0.846
+    # actual_pose.orientation.x = -0.091
+    # actual_pose.orientation.y = 0.763
+    # actual_pose.orientation.z = 0.63 
+    # actual_pose.orientation.w = 0.115
+    # success &= example.reach_cartesian_pose(pose=actual_pose, tolerance=0.01, constraints=None)
      
     rospy.loginfo("Reaching Pose above red bin")
 

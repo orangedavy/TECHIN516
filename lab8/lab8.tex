@@ -46,10 +46,10 @@
 
 
 \Scribe{}
-\Lecturer{Queenie Qiu, John Raiti. Student: Fill your name}
+\Lecturer{Queenie Qiu, John Raiti. Student: \textbf{Shucheng Guo}}
 \LectureNumber{8}
 \LectureDate{DATE: March 9th. 2023}
-\LectureTitle{Pick and Place tasks using physical robot arm}
+\LectureTitle{Pick and Place Tasks Using Physical Robot Arm}
 
 \lstset{style=mystyle}
 
@@ -75,22 +75,40 @@
 \section{Pick and Place task with obstacle avoidance}
 \textbf{Deliverables:}
 In this lab, you will be required to showcase your ability to perform tasks using the robot arm through coding. If you find it too difficult, you can opt to use the Web App or RViz to control the motion instead. However, you need to mention this in your deliverable. You have two task options to choose from.
+    
+Submit a video showcasing your completion of the pick and place task with obstacles using the physical robot arm, along with a written paragraph describing your demonstration. To prepare for this option, it is recommended to complete section 3 of the Pick and Place task with obstacle avoidance in lab7, to become familiar with the procedures of pick and place tasks. We will provide you with a workspace for this task.
+
+\textbf{Answer: }In the video, the sequence of actions followed the order described in the previous lab assignment. As a refresher, the subtasks making up the movements are pasted as follows:
+
 \begin{enumerate}
-    
-    \item The first option is to submit a video showcasing your completion of the pick and place task with obstacles using the physical robot arm, along with a written paragraph describing your demonstration. To prepare for this option, it is recommended to complete section 3 of the Pick and Place task with obstacle avoidance in lab7, to become familiar with the procedures of pick and place tasks. We will provide you with a workspace for this task.
-    
-    Solution:
-    Your video link is \href{https://drive.google.com/drive/folders/1SjXxjI0upjJjGLavEv96zVzDqk9hiY-5?usp=sharing}{Google Drive link to the pick and place video}
-    
-    Your description is:
-    
-    \item You have the option to create a customized video using the physical robot arm. While you can choose any task to demonstrate your understanding, it is mandatory to submit a video. You should also include a written paragraph describing your demonstration. 
-    
-    Solution:
-    Your video link is
-    
-    Your description is:
-    
+    \item Approach the object to pick
+    \begin{itemize}
+        \item Reach position above the center of the object to pick
+        \item Adjust the gripper to open or semi-open state
+        \item Lower the end effector by decreasing \textit{z} to approach object
+    \end{itemize}
+    \item Pick the object
+    \begin{itemize}
+        \item Adjust the gripper to close state
+        \item Raise the end effector by increasing \textit{z} to move object up
+    \end{itemize}
+    \item Move it to the goal position
+    \begin{itemize}
+        \item Calculate waypoints based on current and goal pose
+        \item Plan trajectories with waypoints to avoid crashes
+        \item Execute the movement and reach position above the desired location
+    \end{itemize}
+    \item Place the object
+    \begin{itemize}
+        \item Lower the end effector by decreasing \textit{z} to place object
+        \item Adjust the gripper to open state
+        \item Raise the end effector by increasing \textit{z} to clear object
+    \end{itemize}
+    \item Return to home position
 \end{enumerate}
+
+In designing the control program, all of RViz, terminal, pick\_and\_place.py, and Kinova GUI were used. RViz and terminal were used to obtain the poses and joint states, and python program and GUI were used to move the end effector to desired positions. There wasn't a preference in terms of efficiency, but pick\_and\_place was better in accuracy, whereas Web GUI was easier to navigate.
+
+The demonstration of the pick and place task using Kinova arm can be found in the \href{https://drive.google.com/file/d/1E0ccf-PJmG3pVAfF3og_iQfPEocuBK_P/view?usp=share_link}{Google Drive link}.
 
 \end{document}
